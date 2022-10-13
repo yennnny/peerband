@@ -1,0 +1,134 @@
+@charset "utf-8";
+
+/* 웹폰트 적용 */
+@font-face {
+  font-family: 'AppleSDGothicNeo';
+  src: url('../fonts/AppleSDGothicNeoSB.eot');
+  src: url('../fonts/AppleSDGothicNeoSB.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/AppleSDGothicNeoSB.woff2') format('woff2'),
+      url('../fonts/AppleSDGothicNeoSB.woff') format('woff'),
+      url('../fonts/AppleSDGothicNeoSB.svg#AppleSDGothicNeoSB') format('svg');
+  font-weight: 500;
+}
+@font-face {
+  font-family: 'AppleSDGothicNeo';
+  src: url('../fonts/AppleSDGothicNeoB.eot');
+  src: url('../fonts/AppleSDGothicNeoB.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/AppleSDGothicNeoB.woff2') format('woff2'),
+      url('../fonts/AppleSDGothicNeoB.woff') format('woff'),
+      url('../fonts/AppleSDGothicNeoB.svg#AppleSDGothicNeoB') format('svg');
+  font-weight: 700;
+}
+@font-face {
+  font-family: 'AppleSDGothicNeo';
+  src: url('../fonts/AppleSDGothicNeoR.eot');
+  src: url('../fonts/AppleSDGothicNeoR.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/AppleSDGothicNeoR.woff2') format('woff2'),
+      url('../fonts/AppleSDGothicNeoR.woff') format('woff'),
+      url('../fonts/AppleSDGothicNeoR.svg#AppleSDGothicNeoR') format('svg');
+  font-weight: 400;
+}
+
+/* tag reset */
+body, h1, h2, h3, h4, h5, h6, p, ul, button, input{margin: 0;padding: 0;}
+h1, h2, h3, h4, h5, h6{font-size: 100%;}
+ul{list-style: none;}
+a:link, a:visited, a:hover, a:active{text-decoration: none;color: inherit;}
+input, button{border: none;background: none;cursor: pointer;font-family: inherit;font-size: inherit;color: inherit; outline: none;}
+img{border: none; vertical-align: top; max-width: 100%;}
+main, article, aside, figure, footer, header, nav, section{display: block;}
+
+/* Common style */
+
+/* body, * */
+body{
+  font-family: AppleSDGothicNeo, sans-serif; font-size: 15px; font-weight: 400; line-height: 1; letter-spacing: -0.025em; color: #333; background-color: #fff;
+  -webkit-tap-highlight-color : transparent; outline: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+body.blue{background-color: #DEEAF5;}
+body *{word-break: keep-all; box-sizing: border-box;}
+
+/* color var */
+:root{
+  --brand-color: #27AAE1;
+  --brand-dark-color: #1487B7;
+  
+}
+
+/* form */
+.input_row{margin-bottom: 24px;}
+.input_row:nth-last-of-type(1){margin-bottom: 20px;}
+.input_row label{display: block; padding-bottom: 10px; font-size: 15px; font-weight: 500;}
+.input_row input{display: block; width: 100%; padding: 14px 16px; box-sizing: border-box; background-color: #F6F7F6; border-radius: 12px; font-size: 16px; font-weight: 400;}
+input[type="checkbox"]{width: 1px;height: 1px;overflow: hidden;border: none;position: absolute;clip: rect(1px, 1px, 1px, 1px);clip-path: inset(50%);}
+input[type="checkbox"] + label{position: relative; padding-left: 32px;}
+input[type="checkbox"] + label::after{content: ""; position: absolute; top: 50%; left: 0; transform: translateY(-50%); display: block; width: 20px; height: 20px; border: 1px solid #CFD5DA; border-radius: 4px; transition: background .3s;}
+input[type="checkbox"]:checked + label::after{border: none; background: url("../images/icon/checkbox_checked.svg");}
+::placeholder{font-size: 16px; letter-spacing: -0.025%; color: #AEAEBB;}
+.user_tel_inner{position: relative; width: 100%;}
+
+/* text style */
+.tit1{font-size: 22px; font-weight: 700; line-height: 32px; letter-spacing: 0;}
+.tit2{font-size: 20px; font-weight: 700; line-height: 28px;}
+.tit3{font-size: 18px; font-weight: 500; line-height: 26px;}
+.tit4{font-size: 16px; font-weight: 500;}
+.txt1{font-size: 15px; line-height: 25px;}
+.txt2{font-size: 14px; line-height: 20px;}
+.txt3{font-size: 13px;}
+.color_blue{color: var(--brand-color)}
+
+.warning_txt{position: relative; padding-left: 30px; margin: 30px 0 -31px; font-size: 14px; font-weight: 500; color: #F56065; visibility: hidden; max-height: 0;}
+.warning_txt.on{visibility: visible; max-height: 500px;}
+.warning_txt::after{content: ""; position: absolute; top: 50%; transform: translateY(-50%); left: 0; width: 20px; height: 20px; background: url("../images/icon/warning.svg") no-repeat center / cover;}
+
+/* button style */
+.btn_basic, a.btn_basic{display: block; width: 100%; padding: 1em 0; border-radius: 8px; background-color: #27AAE1; text-align: center; color: #fff; transition: all .3s;}
+.btn_basic.disabled{background-color: #BAE2F3; pointer-events: none;}
+.btn_basic.pale{background-color: #CCE6FB; color: var(--brand-color);}
+.btn_basic.transparent{background-color: transparent; color: #27AAE1;}
+.btn_delete{position: absolute; top: 50%; right: 26px; transform: translateY(-50%); width: 18px;}
+.wrap_btn_btm{position: fixed; bottom: 0; left: 0; width: 100%; height: 120px; padding: 9px 32px 0; border-top: 1px solid #EDEBF5; box-sizing: border-box;}
+
+/* title */
+.tit_msg{margin-bottom: 47px;}
+.tit_msg h2{font-size: 20px; font-weight: 700; line-height: 28px;}
+.tit_msg p{padding-top: 0.5em; color: #999; line-height: 22px;}
+
+/* etc */
+.blind{width: 1px;height: 1px;overflow: hidden;border: none;position: absolute;clip: rect(1px, 1px, 1px, 1px);clip-path: inset(50%);}
+.flex{display:-webkit-box; display:-ms-flexbox; display: -webkit-flex; display:flex;}
+.flex_between{display:-webkit-box; display:-ms-flexbox; display:-webkit-flex; display:flex; justify-content: space-between; -webkit-justify-content: space-between; align-items: center; -webkit-align-items: center;}
+.flex_center{display:-webkit-box; display:-ms-flexbox; display:-webkit-flex; display:flex; justify-content: center; -webkit-justify-content: center; align-items: center; -webkit-align-items: center;}
+.p_r{position: relative;}
+
+/* header */
+#header{display:-webkit-box; display:-ms-flexbox; display:-webkit-flex; display:flex; justify-content: space-between; -webkit-justify-content: space-between; align-items: center; -webkit-align-items: center; position: fixed; top: 0; left: 0; width: 100%; height: 48px; padding: 0 18px;}
+#header.no_fixed{position: static;}
+#header .logo{width: 91px;}
+#header .title{position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 18px;}
+#header .util{display:-webkit-box; display:-ms-flexbox; display: -webkit-flex; display:flex;}
+#header .util button:last-child{margin-left: 18px;}
+#header + main{position: relative; padding: 78px 18px 0;}
+
+.popup{position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 326px; height: 238px; border-radius: 15px; background-color: #fff; z-index: 100; overflow: hidden; visibility: hidden;}
+.popup.on{visibility: visible;}
+.popup .pop_txt_wrap{padding: 40px 26px;}
+.popup .pop_tit{font-size: 20px; font-weight: 700;}
+.popup .pop_txt{padding-top: 1em; font-size: 15px; line-height: 24px;}
+.popup .btn_confirm{position: absolute; bottom: 0; left: 0; width: 100%; border-radius: 0 0 15px 15px;}
+#dim{position: fixed; top: 0; left: 0; width: 100%; height: 100vh; background-color: #000; opacity: .5; z-index: 99;}
+
+#gnbBtm{position: fixed; bottom: 0; left: 0; width: 100%; height: 86px; border-top: 1px solid #F5F5F5; background-color: #fff;}
+#gnbBtm ul{height: 52px;}
+#gnbBtm ul li{display:-webkit-box; display:-ms-flexbox; display:-webkit-flex; display:flex; justify-content: center; -webkit-justify-content: center; align-items: center; -webkit-align-items: center; width: calc(100% / 5);}
+#gnbBtm ul li a{display: block; width: 24px; height: 24px; background: no-repeat center / cover;}
+#gnbBtm ul li:nth-child(1) a{background-image: url("../images/icon/nav_home.svg");}
+#gnbBtm ul li.on:nth-child(1) a{background-image: url("../images/icon/nav_home_on.svg");}
+#gnbBtm ul li:nth-child(2) a{background-image: url("../images/icon/nav_notice.svg");}
+#gnbBtm ul li.on:nth-child(2) a{background-image: url("../images/icon/nav_notice_on.svg");}
+#gnbBtm ul li:nth-child(3) a{background-image: url("../images/icon/nav_write.svg");}
+#gnbBtm ul li.on:nth-child(3) a{background-image: url("../images/icon/nav_write_on.svg");}
+#gnbBtm ul li:nth-child(4) a{background-image: url("../images/icon/nav_point.svg");}
+#gnbBtm ul li.on:nth-child(4) a{background-image: url("../images/icon/nav_point_on.svg");}
+#gnbBtm ul li:nth-child(5) a{background-image: url("../images/icon/nav_profile.svg");}
+#gnbBtm ul li.on:nth-child(5) a{background-image: url("../images/icon/nav_profile_on.svg");}

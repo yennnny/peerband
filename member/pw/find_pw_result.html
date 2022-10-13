@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, user-scalable=no,user-scalable=yes">
+    <title> 비밀번호 재설정 - peerband </title>
+    <link rel="stylesheet" href="../../assets/css/common.css">
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <script src="../../assets/js/script.js" defer></script>
+  </head>
+<body>
+  <header id="header">
+    <button type="button" class="btn_back" onclick="goBack()">
+      <img src="../../assets/images/icon/btn_delete.svg" alt="">
+    </button>
+    <h1 class="title">비밀번호 재설정</h1>
+  </header>
+  <main id="findIdResult">
+    <div class="tit_msg">
+      <h2>새로운 비밀번호를 입력해주세요</h2>
+      <p>변경하실 비밀번호를 입력해주세요</p>
+    </div>
+    <form id="formFindIdResult" action="" name="" method="">
+      <div class="input_row">
+        <label for="userPwReset">비밀번호</label>
+        <input type="text" id="userPwReset" name="userPwReset" placeholder="비밀번호를 입력해 주세요">
+      </div>
+      <div class="input_row">
+        <label for="userPwReset2">비밀번호 확인</label>
+        <input type="text" id="userPwReset2" name="userPwReset2" placeholder="비밀번호를 입력해 주세요">
+      </div>
+    </form>
+    <p class="warning_txt">비밀번호가 일치하지 않습니다.</p> <!-- class명 "on"이 추가되면 나타남 -->
+
+    <div class="wrap_btn_btm">
+      <button type="button" class="btn_basic disabled btn_complete">비밀번호 변경완료</button>
+    </div>
+  </main>
+
+  <div id="popFindPw" class="popup">
+    <div class="pop_txt_wrap">
+      <h2 class="pop_tit">비밀번호 재설정 완료!</h2>
+      <p class="pop_txt">비밀번호가 변경되었습니다.<br> 변경하신 비밀번호로 로그인해주세요.</p>
+    </div>
+    <a href="../index.html" class="btn_basic btn_confirm">확인</a>
+  </div>
+
+  <script>    
+    document.querySelector('.btn_complete').addEventListener('click', function(){
+      const $popup = document.querySelector('.popup');    
+      const $dim = document.createElement('div');
+      $dim.setAttribute('id', 'dim');
+      if(!$popup.classList.contains('on')){
+        !$popup.classList.add('on');
+        document.body.appendChild($dim);
+      }
+      document.querySelector('.btn_confirm').addEventListener('click', () =>{ $dim.remove; });
+    });
+  </script>
+</body>
+</html>
