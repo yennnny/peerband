@@ -39,10 +39,11 @@ img{border: none; vertical-align: top; max-width: 100%;}
 main, article, aside, figure, footer, header, nav, section{display: block;}
 
 /*************************************** Common style ****************************************/
-/* body, * */
+/* html, body, * */
+html{height: -webkit-fill-available;}
 body{font-family: AppleSDGothicNeo, sans-serif; font-size: 15px; font-weight: 400; line-height: 1; letter-spacing: -0.025em; color: #333; background-color: #fff;
   -webkit-tap-highlight-color : transparent; outline: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  min-height: -webkit-fill-available;
+  min-height: 100vh; min-height: -webkit-fill-available;
 }
 body.blue{background-color: #DEEAF5;}
 body *{word-break: keep-all; box-sizing: border-box;}
