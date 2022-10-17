@@ -1,6 +1,6 @@
 @charset "utf-8";
 /* 메인 화면 */
-#main{position: relative; width: 100%; height: 100vh; overflow: hidden; background: #DEEAF5}
+#main{position: relative; width: 100%; min-height: 100vh; min-height: -webkit-fill-available; height: 100vh; height: -webkit-fill-available; height: fill-available; overflow: hidden; background: #DEEAF5}
 #main > *{margin: 0 auto; text-align: center;}
 #main h1{width: 217px; height: 87px; margin: 7em auto 4.4em; background: url("../images/illust/mainTxt.svg") no-repeat center / cover;}
 #main .main_img{padding: 0 18px; transition: all .3s;}
