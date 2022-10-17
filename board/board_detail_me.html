@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-  <meta name="viewport"  content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
   <title> 게시물 상세 - peerband </title>
   <link rel="stylesheet" href="../assets/css/common.css">
   <link rel="stylesheet" href="../assets/css/style.css">
@@ -22,7 +22,7 @@
         <img src="../assets/images/icon/btn_search.svg" alt="검색">
       </button>
       <button type="button" class="btn_siren">
-        <img src="../assets/images/icon//btn_siren.svg" alt="신고">
+        <img src="../assets/images/icon//btn_more.svg" alt="메뉴 더보기">
       </button>
     </div>
   </header>
@@ -121,20 +121,53 @@
           </div>
         </div>
       </div>
+      <div class="comment_pop">
+        <div class="comment_pop_top">
+          <button type="button" class="btn_close"><img src="../assets/images/icon/btn_delete_small.svg"
+              alt="닫기"></button>
+          <p>댓글 수정 중</p>
+        </div>
+        <div class="comment_pop_txt">
+          <textarea name="" id="writeComment" rows="1" placeholder="댓글을 입력하세요"></textarea>
+          <button type="submit" class="btn_write_comment">
+            <img src="../assets/images/icon/btn_submit_txt.svg" alt="">
+          </button>
+        </div>
+      </div>
     </section>
+
+    <div id="popDeleteBoard" class="popup">
+      <div class="pop_txt_wrap">
+        <h2 class="pop_tit">게시물 삭제</h2>
+        <p class="pop_txt">선물한 포인트는 다시 받을 수 없습니다.<br>
+          등록한 게시물을 삭제하시겠습니까?</p>
+      </div>
+      <ul class="pop_btn_wrap">
+        <li><button type="button" class="btn_undo">취소</button></li>
+        <li><button type="button" class="btn_do">삭제</button></li>
+      </ul>
+    </div>
+    <div id="popDeleteBoard" class="popup">
+      <div class="pop_txt_wrap">
+        <h2 class="pop_tit">게시물 삭제</h2>
+        <p class="pop_txt">선물한 포인트는 다시 받을 수 없습니다.<br>
+          등록한 게시물을 삭제하시겠습니까?</p>
+      </div>
+      <ul class="pop_btn_wrap">
+        <li><button type="button" class="btn_undo">취소</button></li>
+        <li><button type="button" class="btn_do">삭제</button></li>
+      </ul>
+    </div>
   </main>
   <script>
     document.querySelector('textarea').onfocus = function () {
-      if(!this.closest('.comment_pop').classList.contains('on')) this.closest('.comment_pop').classList.add('on');
+      if (!this.closest('.comment_pop').classList.contains('on')) this.closest('.comment_pop').classList.add('on');
     }
     document.querySelector('textarea').onblur = function () {
       document.querySelector('.comment_pop').classList.remove('on');
     }
-    document.querySelector('.btn_close').addEventListener('click', function(){
+    document.querySelector('.btn_close').addEventListener('click', function () {
       document.querySelector('.comment_pop').classList.remove('on');
       document.querySelector('textarea')[0].blur();
     });
   </script>
-</body>
-
-</html>

@@ -44,13 +44,7 @@ main#login{width: 100%; height: 100vh; overflow: hidden; padding: 0; transition:
 #home .hold_points_box a::after{content: ""; position: absolute; top: 50%; right: 0; transform: translateY(-50%); width: 20px; height: 20px; background: url("../images/icon/btn_arrow_right.svg") no-repeat center / cover;}
 
 #home .home_board{padding-bottom: 86px;}
-#home .home_board .board_nothing{display: none; visibility: hidden;}
-#home .home_board .board_nothing + div{display: block; visibility: visible;}
 #home .home_board.nothing{height: calc(100vh - 373px - 86px);}
-#home .home_board.nothing .board_nothing{display: block; visibility: visible;}
-#home .home_board.nothing .board_nothing + div{display: none; visibility: hidden;}
-#home .home_board.nothing .board_nothing{position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 100%; text-align: center; color: #C7C7D0;}
-
 #home .home_board_inner .board_head{padding: 32px 0 17px; border-bottom: 1px solid #EBEEF5;}
 #home .home_board_inner .board_head h3{ font-weight: 400;}
 #home .home_board_inner .board_head .board_sum{font-weight: 700;}
@@ -59,6 +53,7 @@ main#login{width: 100%; height: 100vh; overflow: hidden; padding: 0; transition:
 
 /*  게시글 검색 board/search.html */ 
 #searchBoardHeader{display:-webkit-box; display:-ms-flexbox; display:-webkit-flex; display:flex; justify-content: space-between; -webkit-justify-content: space-between; align-items: center; -webkit-align-items: center; width: 100%; height: 36px; margin-left: 9px; padding: 10px; border-radius: 13px; background-color: #F0F2F5;}
+#searchBoardHeader input{width: 100%;}
 #searchBoardHeader button{width: 18px; height: 18px; opacity: .5;}
 main#searchBoard{padding: 56px 0 0;}
 #searchBoard .recent_search_word{display: none; visibility: hidden;}
@@ -71,3 +66,15 @@ main#searchBoard{padding: 56px 0 0;}
 .search_word_list li p{display:-webkit-box; display:-ms-flexbox; display:-webkit-flex; display:flex; align-items: center; -webkit-align-items: center;}
 .search_word_list li .search_date{font-size: 14px; color: #999;}
 .search_word_list li .btn_delete{position: static; transform: none; width: 9px; height: 9px; margin-left: 20px;}
+#searchBoard.nothing{height: 100vh;}
+#searchBoard .search_board{padding: 18px;}
+
+
+main#notification{padding: 48px 0 0;}
+#notification .notif_header{position: relative; height: 50px; padding-right: 18px; padding-left: 46px; background-color: #EEF2F8;}
+#notification .notif_header::before{content: ""; position: absolute; top: 50%; left: 18px; transform: translateY(-50%); width: 20px; height: 20px; background: url("../images/icon/notice.svg");}
+#notification .notif_header p{font-size: 13px; color: #999;}
+.btn_alarm{position: relative; width: 44px; height: 26px; border-radius: 16px; background-color: #D5DDE0;}
+.btn_alarm::after{content: ""; position: absolute; top: 50%; left: 3px; transform: translateY(-50%); width: 20px; height: 20px; border-radius: 50%; background-color: #fff; transition: all .35s;}
+.btn_alarm.on{background-color: var(--brand-color);}
+.btn_alarm.on::after{left: calc(100% - 23px);}

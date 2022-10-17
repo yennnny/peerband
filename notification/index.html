@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <title> 알림함 - peerband </title>
+  <link rel="stylesheet" href="../assets/css/common.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <script src="../assets/js/script.js" defer></script>
+</head>
+
+<body>
+  <header id="header">
+    <button type="button" class="btn_back" onclick="goBack()">
+      <img src="../assets/images/icon/btn_back.svg" alt="뒤로가기">
+    </button>
+    <h1 class="title">알림</h1>
+  </header>
+  <main id="notification">
+    <div class="notif_header flex_between">
+      <p>알림 ON / OFF 설정이 가능합니다</p>
+      <button type="button" class="btn_alarm on"></button>
+    </div>
+    <div class="notif_body">
+      <ul>
+        <li>
+          <a href="">
+            <span class="notif_tit">피어밴드 이벤트안내!</span>
+            <span class="notif_txt">소장 가치 높은(?) 역사적 자료 팝니다!</span>
+            <span class="notif_date">3일 전</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </main>
+  <script>
+    document.querySelector('.btn_alarm').addEventListener('click', function(){
+      if(this.classList.contains('on')) this.classList.remove('on');
+      else this.classList.add('on');
+    });
+  </script>
+</body>
+
+</html>
