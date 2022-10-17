@@ -34,11 +34,11 @@
     <p class="warning_txt">비밀번호가 일치하지 않습니다.</p> <!-- class명 "on"이 추가되면 나타남 -->
 
     <div class="wrap_btn_btm">
-      <button type="button" class="btn_basic disabled btn_complete">비밀번호 변경완료</button>
+      <button type="button" class="btn_basic disabled btn_complete btn_pop_open">비밀번호 변경완료</button>
     </div>
   </main>
 
-  <div id="popFindPw" class="popup">
+  <div id="popFindPw" class="popup confirm">
     <div class="pop_txt_wrap">
       <h2 class="pop_tit">비밀번호 재설정 완료!</h2>
       <p class="pop_txt">비밀번호가 변경되었습니다.<br> 변경하신 비밀번호로 로그인해주세요.</p>
@@ -47,16 +47,7 @@
   </div>
 
   <script>    
-    document.querySelector('.btn_complete').addEventListener('click', function(){
-      const $popup = document.querySelector('.popup');    
-      const $dim = document.createElement('div');
-      $dim.setAttribute('id', 'dim');
-      if(!$popup.classList.contains('on')){
-        !$popup.classList.add('on');
-        document.body.appendChild($dim);
-      }
-      document.querySelector('.btn_confirm').addEventListener('click', () =>{ $dim.remove; });
-    });
+    
   </script>
 </body>
 </html>

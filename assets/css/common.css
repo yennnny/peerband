@@ -95,7 +95,7 @@ textarea{resize: none;}
 .p_r{position: relative;}
 
 /* Header */
-#header{display:-webkit-box; display:-ms-flexbox; display:-webkit-flex; display:flex; justify-content: space-between; -webkit-justify-content: space-between; align-items: center; -webkit-align-items: center; position: fixed; top: 0; left: 0; width: 100%; height: 48px; padding: 0 18px; background-color: #fff; z-index: 1000;}
+#header{display:-webkit-box; display:-ms-flexbox; display:-webkit-flex; display:flex; justify-content: space-between; -webkit-justify-content: space-between; align-items: center; -webkit-align-items: center; position: fixed; top: 0; left: 0; width: 100%; height: 48px; padding: 0 18px; background-color: #fff; z-index: 100;}
 #header.no_fixed{position: static;}
 #header .logo{width: 91px;}
 #header .title{position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 18px;}
@@ -105,13 +105,19 @@ textarea{resize: none;}
 body.blue #header{background-color: transparent;}
 
 /* Popup */
-.popup{position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 326px; height: 238px; border-radius: 15px; background-color: #fff; z-index: 100; overflow: hidden; visibility: hidden;}
+.popup{position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 326px; height: 238px; border-radius: 15px; background-color: #fff; z-index: 101; overflow: hidden; visibility: hidden;}
 .popup.on{visibility: visible;}
 .popup .pop_txt_wrap{padding: 40px 26px;}
 .popup .pop_tit{font-size: 20px; font-weight: 700;}
 .popup .pop_txt{padding-top: 1em; font-size: 15px; line-height: 24px;}
 .popup .btn_confirm{position: absolute; bottom: 0; left: 0; width: 100%; border-radius: 0 0 15px 15px;}
-#dim{position: fixed; top: 0; left: 0; width: 100%; height: 100vh; background-color: #000; opacity: .5; z-index: 99;}
+.pop_btn_wrap{position: absolute; bottom: 0; left: 0; display:-webkit-box; display:-ms-flexbox; display: -webkit-flex; display:flex; width: 100%;}
+.pop_btn_wrap li{width: 50%; height: 60px;}
+.pop_btn_wrap li button{width: 100%; height: 100%; font-size: 16px; font-weight: 500;}
+.pop_btn_wrap li .btn_undo{background-color: #eee;}
+.pop_btn_wrap li .btn_do{background-color: #F56065; color: #fff;}
+#dim{position: fixed; top: 0; left: 0; width: 100%; height: 100vh; background-color: #000; opacity: .5; z-index: 100;}
+
 
 /* Gnb Bottom */
 #gnbBtm{position: fixed; bottom: 0; left: 0; width: 100%; height: 86px; border-top: 1px solid #F5F5F5; background-color: #fff;}
@@ -175,6 +181,13 @@ body.blue #header{background-color: transparent;}
 .comment_cnt .comment_inner .comment_util li{margin-right: 8px;}
 .comment_cnt .comment_inner .comment_util button{font-size: 13px; color: var(--non-emphasize-color);}
 
-.comment_pop{position: fixed; bottom: 0; left: 0; right: 0; display:-webkit-box; display:-ms-flexbox; display:-webkit-flex; display:flex; align-items: center; -webkit-align-items: center; width: 93.84615385%; margin: 0 auto 40px; padding: 6px 6px 6px 18px; border: 1px solid #EFEEF3; border-radius: 21px;}
+.comment_pop{position: fixed; bottom: 0; left: 0; right: 0; background-color: #fff;}
+.comment_pop .comment_pop_txt{display:-webkit-box; display:-ms-flexbox; display:-webkit-flex; display:flex; align-items: center; -webkit-align-items: center; width: 93.84615385%; margin: 0 auto 40px; padding: 6px 6px 6px 18px; border: 1px solid #EFEEF3; border-radius: 21px;}
+.comment_pop .comment_pop_top{display: none; visibility: hidden; position: relative; padding: 11px 0 5px; font-size: 12px; text-align: center; color: var(--brand-dark-color);}
+.comment_pop .comment_pop_top .btn_close{position: absolute; top: 11px; left: 18px;}
 #writeComment{flex-grow: 1;}
-.comment_pop .btn_write_comment{flex-basis: 30px;}
+.comment_pop .btn_write_comment{flex-basis: 30px; opacity: .3;}
+.comment_pop.on{background-color: #F9FDFF;}
+.comment_pop.on .comment_pop_top{display: block; visibility: visible;}
+.comment_pop.on .comment_pop_txt{border-color: var(--brand-color);}
+.comment_pop.on .btn_write_comment{opacity: 1;}
