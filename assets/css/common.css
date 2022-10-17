@@ -192,5 +192,5 @@ body.blue #header{background-color: transparent;}
 .comment_pop .btn_write_comment{flex-basis: 30px; opacity: .3;}
 .comment_pop.on{background-color: #F9FDFF;}
 .comment_pop.on .comment_pop_top{display: block; visibility: visible;}
-.comment_pop.on .comment_pop_txt{border-color: var(--brand-color);}
+.comment_pop.on .comment_pop_txt{margin-bottom: 5px; border-color: var(--brand-color);}
 .comment_pop.on .btn_write_comment{opacity: 1;}
