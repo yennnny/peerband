@@ -117,7 +117,24 @@ main#notice, main#alarm{padding: 48px 0 0;}
 #postBoard #postImg + label{position: relative; display: inline-block; padding: 16px 0 16px 28px; cursor: pointer; font-size: 16px; color: #666;}
 #postBoard #postImg + label::after{content: ""; position: absolute; top: 50%; transform: translateY(-50%); left: 0; width: 20px; height: 20px; background: url("../images/icon/btn_add_img.svg") no-repeat center / cover;}
 
-
+#pointManagement{background-color: #fbfbfb;}
+#pointManagement .point_held{margin-top: 20px; border-radius: 14px; overflow: hidden; box-shadow: 0px 3px 16px 0px rgba(0, 0, 0, 15%); -webkit-box-shadow: 0px 3px 16px 0px rgba(0, 0, 0, 15%);}
+#pointManagement .point_held h2{position: relative; padding: 37px 24px; border-radius: 14px; font-size: 15px; color: #999; background: #fff url("../images/illust/coinPoint.svg") no-repeat center right;}
+#pointManagement .point_held .point_num{display: block; padding-top: .3em; font-size: 28px; font-weight: 700; color: #333;}
+#pointManagement .point_held ul{padding-top: 16px; margin-top: -16px; background-color: var(--brand-color);}
+#pointManagement .point_held ul li{position: relative; width: 50%; padding: 16px 0; text-align: center; color: #fff;}
+#pointManagement .point_held ul li:first-child::after{content: ""; position: absolute; top: 50%; right: 0; transform: translateY(-50%); width: 1px; height: 28px; background-color: #219BCE;}
+#pointManagement .point_held ul li a{display: block; width: 100%; height: 100%;}
+#pointManagement .point_history_wrap{margin-top: 32px; margin-bottom: 15px;}
+#pointManagement .point_history_filter{padding-bottom: 15px; margin-bottom: 15px; border-bottom: 1px solid var(--line-color);}
+#pointManagement .point_history_filter li button{margin-right: 20px; font-size: 18px; font-weight: 500; color: #c2c2c2}
+#pointManagement .point_history_filter li.on button{color:#333}
+#pointManagement .point_history{display:-webkit-box; display:-ms-flexbox; display:-webkit-flex; display:flex; justify-content: space-between; -webkit-justify-content: space-between; align-items: center; -webkit-align-items: center; padding: 13px 18px;}
+#pointManagement .point_history .point_right{text-align: right;}
+#pointManagement .point_history strong{display: block; margin-bottom: .5em; font-size: 18px;}
+#pointManagement .point_history span{font-size: 14px; color: #999;}
+#pointManagement .point_history .point_left strong{font-size: 16px;}
+#pointManagement .point_history.plus .point_right strong{color: var(--brand-color);}
 
 
 

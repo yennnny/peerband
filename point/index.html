@@ -28,18 +28,18 @@
             <h2>보유 포인트
                 <span class="point_num">117,000P</span>
             </h2>
-            <ul>
+            <ul class="flex">
                 <li><a href="">출금하기</a></li>
                 <li><a href="">기부하기</a></li>
             </ul>
         </div>
         <div class="point_history_wrap">
-            <ul class="point_history_filter">
-                <li><button type="button">최신순</button></li>
+            <ul class="point_history_filter flex">
+                <li class="on"><button type="button">최신순</button></li>
                 <li><button type="button">과거순</button></li>
             </ul>
-            <div class="point_history_list">
-                <div class="point_history">
+            <ul class="point_history_list">
+                <li class="point_history plus"> <!-- plus 클래스명이 있다면 포인트 색상 변경 -->
                     <div class="point_left">
                         <strong class="point_history_tit">홍길동님 적립</strong>
                         <span class="point_history_date">2022.07.24</span>
@@ -48,8 +48,28 @@
                         <strong class="point">5,000P</strong>
                         <span class="point_Accumulated">117,000P</span>
                     </div>
-                </div>
-            </div>
+                </li>
+                <li class="point_history plus">
+                    <div class="point_left">
+                        <strong class="point_history_tit">관리자 지급</strong>
+                        <span class="point_history_date">2022.07.24</span>
+                    </div>
+                    <div class="point_right">
+                        <strong class="point">10,000P</strong>
+                        <span class="point_Accumulated">200,000P</span>
+                    </div>
+                </li>
+                <li class="point_history">
+                    <div class="point_left">
+                        <strong class="point_history_tit">홍길동님 적립</strong>
+                        <span class="point_history_date">2022.07.24</span>
+                    </div>
+                    <div class="point_right">
+                        <strong class="point">-20,000P</strong>
+                        <span class="point_Accumulated">117,000P</span>
+                    </div>
+                </li>
+            </ul>
         </div>
         <nav id="gnbBtm">
             <ul class="flex">
