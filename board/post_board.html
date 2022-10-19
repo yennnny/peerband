@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <title> 게시물 등록 - peerband </title>
+  <link rel="stylesheet" href="../assets/css/common.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <script src="../assets/js/script.js" defer></script>
+</head>
+
+<body>
+  <header id="header">
+    <button type="button" class="btn_back" onclick="goBack()">
+      <img src="../assets/images/icon/btn_back.svg" alt="뒤로가기">
+    </button>
+    <h1 class="title">게시물등록</h1>
+    <button type="button" class="btn_post">등록</button>
+  </header>
+  <main id="postBoard">
+    <p class="holding_point">보유 포인트 <span>117,000</span>P</p>
+    <div class="post_board_info">
+      <h2 class="post_board_tit">기본 정보</h2>
+      <ul class="flex">
+        <li class="point_recipient">
+          <label for="pointRecipient">직원 선택</label>
+          <input type="text" value="" id="pointRecipient" name="pointRecipient" placeholder="선택해주세요" >
+          <button type="button" class="btn_choice_recipient"></button>
+        </li>
+        <li class="send_point">
+          <label for="sendPoint">보낼 포인트</label>
+          <input type="text" id="sendPoint" name="sendPoint" placeholder="입력해주세요">
+        </li>
+      </ul>
+    </div>
+    <div class="post_board_txt_wrap">
+      <h2 class="post_board_tit">글작성</h2>
+      <form id="postBoardForm" name="postBoardForm" action="">
+        <div class="post_board_txt_wrap">
+          <input type="text" id="postigTit" name="postigTit" placeholder="제목을 입력해주세요 (??자 이내)">
+          <label for="postigTit" class="blind">게시글 제목</label>
+        </div>
+        <div class="post_textarea" contenteditable="true" placeholder="칭찬하실 내용을 입력해주세요"></div>
+        <!-- 이미지 넣음 예시
+          <div class="post_textarea" contenteditable="true" placeholder="칭찬하실 내용을 입력해주세요">
+          <div class="post_img">
+            <img src="../assets/images/board/example_board.jpg" alt="">
+            <button type="button" class="btn_delete">
+              <img src="../assets/images/icon/btn_delete_circle.svg" alt="">
+            </button>
+          </div>
+        </div> -->
+      </form>
+      <div class="btn_add_img">
+        <input type="file" name="postImg" id="postImg" class="blind">
+        <label for="postImg">사진추가</label> <!-- 사진 추가되면 div.post_img 안에 넣기 (삭제 버튼) -->
+      </div>
+    </div>
+  </main>
+  <script>
+    const $textarea = document.querySelector('.post_textarea');
+    $textarea.addEventListener('keyup', function(){
+      $textarea.style.height = this.scrollHeight + 'px';      
+    });
+  </script>
+</body>
+
+</html>

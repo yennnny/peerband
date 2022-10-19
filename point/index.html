@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title> 알림함 - peerband </title>
+    <link rel="stylesheet" href="../assets/css/common.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <script src="../assets/js/script.js" defer></script>
+</head>
+
+<body>
+    <header id="header" class="right">
+        <h1 class="title">포인트 관리</h1>
+        <div class="util">
+            <button type="button" class="btn_search">
+                <img src="../assets/images/icon/btn_search.svg" alt="검색">
+            </button>
+            <button type="button" class="btn_alarm on">
+                <img src="../assets/images/icon//btn_alarm.svg" alt="알림">
+            </button>
+        </div>
+    </header>
+    <main id="pointManagement">
+        <div class="point_held">
+            <h2>보유 포인트
+                <span class="point_num">117,000P</span>
+            </h2>
+            <ul>
+                <li><a href="">출금하기</a></li>
+                <li><a href="">기부하기</a></li>
+            </ul>
+        </div>
+        <div class="point_history_wrap">
+            <ul class="point_history_filter">
+                <li><button type="button">최신순</button></li>
+                <li><button type="button">과거순</button></li>
+            </ul>
+            <div class="point_history_list">
+                <div class="point_history">
+                    <div class="point_left">
+                        <strong class="point_history_tit">홍길동님 적립</strong>
+                        <span class="point_history_date">2022.07.24</span>
+                    </div>
+                    <div class="point_right">
+                        <strong class="point">5,000P</strong>
+                        <span class="point_Accumulated">117,000P</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <nav id="gnbBtm">
+            <ul class="flex">
+                <li><a href=""><span class="blind">홈</span></a></li>
+                <li><a href=""><span class="blind">회사공지</span></a></li>
+                <li><a href=""><span class="blind">게시글 쓰기</span></a></li>
+                <li class="on"><a href=""><span class="blind">나의 포인트</span></a></li>
+                <li><a href=""><span class="blind">프로필</span></a></li>
+            </ul>
+        </nav>
+    </main>
+</body>
+
+</html>

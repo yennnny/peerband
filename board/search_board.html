@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport"  content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <title> 게시물 상세 - peerband </title>
+  <link rel="stylesheet" href="../assets/css/common.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <script src="../assets/js/script.js"></script>
+</head>
+
+<body>
+  <header id="header">
+    <button type="button" class="btn_back" onclick="goBack()">
+      <img src="../assets/images/icon/btn_back.svg" alt="">
+    </button>
+    <form id="searchBoardHeader" name="">
+      <input id="searchTxt" name="searchTxt" type="text" placeholder="검색어 입력">
+      <label for="searchTxt" class="blind">검색어</label>
+      <button type="reset" class="btn_reset">
+        <img src="../assets/images/icon/btn_delete_circle.svg" alt="">
+      </button>
+    </form>
+  </header>
+  <main id="searchBoard" class=""> <!-- 게시물이 없다면 .home_board에 class명 "nothing" 추가, 있다면 제거 -->
+    <section class="recent_search_word">
+      <div class="recent_search_word_header">
+        <h2>최근 검색어</h2>
+        <button type="button" class="btn_all_delete">전체 삭제</button>
+      </div>
+      <ul class="search_word_list">
+        <li>
+          <a href="" class="search_word">홍길동</a>
+          <p>
+            <span class="search_date">09.19</span>
+            <button type="button" class="btn_delete">
+              <img src="../assets/images/icon/btn_delete_small.svg" alt="지우기">
+            </button>
+          </p>
+        </li>
+        <li>
+          <a href="" class="search_word">홍길동</a>
+          <p>
+            <span class="search_date">09.19</span>
+            <button type="button" class="btn_delete">
+              <img src="../assets/images/icon/btn_delete_small.svg" alt="지우기">
+            </button>
+          </p>
+        </li>
+        <li>
+          <a href="" class="search_word">홍길동</a>
+          <p>
+            <span class="search_date">09.19</span>
+            <button type="button" class="btn_delete">
+              <img src="../assets/images/icon/btn_delete_small.svg" alt="지우기">
+            </button>
+          </p>
+        </li>
+      </ul>
+    </section>
+    <section class="nothing_box"> 
+      <p>검색 결과가 없습니다.<br>
+        검색어가 올바른지 확인해 보세요.</p>
+    </section>
+    <section class="search_board">
+      <h2 class="search_board_tit">
+        검색결과 <span class="color_blue">2</span>건
+      </h2>
+      <div class="board_cnt">
+        <div class="board_top flex_between">
+          <div class="board_writer flex_center">
+            <img src="../assets/images/icon/profile_basic.svg" alt="하늘색 배경의 프로필 기본 이미지" class="img_profile">
+            <div class="board_writer_info">
+              <strong class="board_writer_name tit4">홍길동</strong>
+              <p class="board_writer_dept">마케팅팀</p>
+            </div>
+          </div>
+          <p class="board_time">6시간 전</p>
+        </div>
+        <div class="board_mid">
+          <div class="board_gift">
+            <div class="board_recipient flex">
+              <img src="../assets/images/icon/profile_basic.svg" alt="하늘색 배경의 프로필 기본 이미지" class="img_profile">
+              <div class="board_recipient_info">
+                <span class="board_writer_dept">마케팅팀</span>
+                <strong class="board_writer_name">이민석</strong>
+                님에게<br>
+                <span class="point">5,000포인트</span>를 선물했어요
+              </div>
+            </div>
+          </div>
+          <div class="board_txt_wrap">
+            <h4 class="board_tit">마케팅팀 이민석 회원을 칭찬해요!</h4>
+            <p class="board_txt txt1">
+              세줄이 넘는 긴 글이 있을 때 어떻게 보여줄지 적어보고 있을게요. 마케팅팀 이민석 회원님을 칭찬해요 저번에 어쩌고 저쩌고 너무 잘해주셔서 너무 고마웠어요 ㅎㅎ 감동입니다. 그리고 어쩌구 저쩌구
+            </p>
+            <button type="button" class="btn_more">더보기</button>
+          </div>
+        </div>
+        <div class="board_btm">
+          <ul class="board_util flex">
+            <li class="board_util_hits">
+              <span>224</span>
+            </li>
+            <li class="board_util_comments">
+              <span>24</span>
+            </li>
+            <li class="board_util_like">
+              <button type="button">
+                <span>125</span>
+              </button>
+            </li>
+            <li class="board_util_clap on">
+              <button type="button">
+                <span>16</span>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="board_cnt">
+        <div class="board_top flex_between">
+          <div class="board_writer flex_center">
+            <img src="../assets/images/icon/profile_basic.svg" alt="하늘색 배경의 프로필 기본 이미지" class="img_profile">
+            <div class="board_writer_info">
+              <strong class="board_writer_name tit4">홍길동</strong>
+              <p class="board_writer_dept">마케팅팀</p>
+            </div>
+          </div>
+          <p class="board_time">6시간 전</p>
+        </div>
+        <div class="board_mid">
+          <div class="board_gift">
+            <div class="board_recipient flex">
+              <img src="../assets/images/icon/profile_basic.svg" alt="하늘색 배경의 프로필 기본 이미지" class="img_profile">
+              <div class="board_recipient_info">
+                <span class="board_writer_dept">마케팅팀</span>
+                <strong class="board_writer_name">이민석</strong>
+                님에게<br>
+                <span class="point">5,000포인트</span>를 선물했어요
+              </div>
+            </div>
+          </div>
+          <div class="board_txt_wrap">
+            <h4 class="board_tit">마케팅팀 이민석 회원을 칭찬해요!</h4>
+            <p class="board_txt txt1">
+              세줄이 넘는 긴 글이 있을 때 어떻게 보여줄지 적어보고 있을게요. 마케팅팀 이민석 회원님을 칭찬해요 저번에 어쩌고 저쩌고 너무 잘해주셔서 너무 고마웠어요 ㅎㅎ 감동입니다. 그리고 어쩌구 저쩌구
+            </p>
+            <button type="button" class="btn_more">더보기</button>
+          </div>
+        </div>
+        <div class="board_btm">
+          <ul class="board_util flex">
+            <li class="board_util_hits">
+              <span>224</span>
+            </li>
+            <li class="board_util_comments">
+              <span>24</span>
+            </li>
+            <li class="board_util_like">
+              <button type="button">
+                <span>125</span>
+              </button>
+            </li>
+            <li class="board_util_clap on">
+              <button type="button">
+                <span>16</span>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script>
+    document.getElementById('searchTxt').onfocus = function(){
+      document.querySelector('.recent_search_word').classList.add('on');
+    }
+    document.getElementById('searchTxt').onblur = function(){
+      document.querySelector('.recent_search_word').classList.remove('on');
+    }
+    document.querySelector('.btn_reset').addEventListener('click', function(){
+      document.getElementById('searchTxt').focus();
+    });
+  </script>
+</body>
+
+</html>
