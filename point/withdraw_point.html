@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title> 알림함 - peerband </title>
+    <link rel="stylesheet" href="../assets/css/common.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <script src="../assets/js/script.js" defer></script>
+</head>
+
+<body>
+    <header id="header">
+        <button type="button" class="btn_back" onclick="goBack()">
+            <img src="../assets/images/icon/btn_back.svg" alt="뒤로가기">
+        </button>
+        <h1 class="title">포인트 출금</h1>
+    </header>
+    <main id="withdrawPoint">
+        <form id="withdrawPointForm" name="withdrawPoint" action="">
+            <div class="widthdraw_inner">
+                <p class="point_held">보유 포인트: <span>117,000</span>P</p>
+                <label for="widthdrawAmount" class="widthdraw_tit">출금 금액</label>
+                <input type="text" id="widthdrawAmount" name="widthdrawAmount" placeholder="출금금액을 입력해주세요">
+            </div>
+            <div class="widthdraw_inner">
+                <p class="widthdraw_tit">입금 계좌정보</p>
+                <div class="widthdraw_checkbox">
+                    <input type="checkbox" name="SavingAccount" id="SavingAccount">
+                    <label for="SavingAccount">계좌정보 저장</label>
+                </div>
+                <div class="widthdraw_input_wrap flex">
+                    <div class="widthdraw_input">
+                        <p class="widthdraw_input_tit">은행 선택</p>
+                        <button type="button" class="btn_select_bank">선택해주세요</button>
+                        <ul class="widthdraw_select_bank">
+                            <li><button type="button">국민은행</button></li>
+                            <li><button type="button">NH농협은행</button></li>
+                            <li><button type="button">신한은행</button></li>
+                            <li><button type="button">우리은행</button></li>
+                            <li><button type="button">토스뱅크</button></li>
+                            <li><button type="button">카카오뱅크</button></li>
+                        </ul>
+                    </div>
+                    <div class="widthdraw_input">
+                        <label for="depositor" class="widthdraw_input_tit">예금주</label>
+                        <input type="text" id="depositor" name="depositor" placeholder="입력해주세요">
+                    </div>
+                </div>
+                <div class="widthdraw_input account">
+                    <label for="accountNum"  class="widthdraw_input_tit">계좌번호 입력</label>
+                    <input type="number" id="accountNum" name="accountNum" placeholder="입력해주세요">
+                </div>
+            </div>
+        </form>
+        <div class="widthdraw_detail">
+            <ul>
+                <li><span>차감 포인트</span><strong>50,000원</strong></li>
+                <li><span>입금수수료</span><strong>1,000원</strong></li>
+                <li><span>입금 금액</span><strong>49,000원</strong></li>
+            </ul>
+            <p class="total_amount"><span>총 입금될 금액</span><strong>105,000원</strong></p>
+        </div>
+        <ul class="widthdraw_notice">
+            <li>최소 출금금액은 <span class="color_blue">10,000P</span> 입니다.</li>
+            <li>출금 시, <span class="color_blue">입금수수료</span>가 차감되어 입금됩니다.</li>
+            <li><span class="color_blue">계좌정보가 올바르지 않는 경우</span> 출금신청이 <span class="color_blue">취소되거나 지연</span>될 수 있으므로 주의해주세요.</li>
+        </ul>
+        <div class="wrap_btn_btm"><button type="submit" class="btn_basic disabled">출금신청하기</button></div>
+    </main>
+    <script>
+        document.querySelector('.btn_select_bank').addEventListener('click', function(){
+            if(!this.nextElementSibling.classList.contains('on')) this.nextElementSibling.classList.add('on');
+            else this.nextElementSibling.classList.remove('on');
+        });
+    </script>
+</body>
+
+</html>
