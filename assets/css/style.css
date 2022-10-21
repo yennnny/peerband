@@ -71,11 +71,6 @@ main#searchBoard{padding: 56px 0 0;}
 
 /*  알림함 notice/index.html */ 
 main#notice, main#alarm{padding: 48px 0 0;}
-#alarm .btn_on_off{position: relative; width: 44px; height: 26px; border-radius: 16px; background-color: #D5DDE0;}
-#alarm .btn_on_off::after{content: ""; position: absolute; top: 50%; left: 3px; transform: translateY(-50%); width: 20px; height: 20px; border-radius: 50%; background-color: #fff; transition: all .35s;}
-#alarm .btn_on_off.on{background-color: var(--brand-color);}
-#alarm .btn_on_off.on::after{left: calc(100% - 23px);}
-
 .notice_header{position: relative; height: 50px; padding-right: 18px; padding-left: 46px; background-color: #EEF2F8;}
 .notice_header::before{content: ""; position: absolute; top: 50%; left: 18px; transform: translateY(-50%); width: 20px; height: 20px; background: url("../images/icon/notice.svg");}
 .notice_header p{font-size: 13px; color: #999;}
@@ -141,36 +136,97 @@ main#notice, main#alarm{padding: 48px 0 0;}
 #pointManagement .point_history.plus .point_right strong{color: var(--brand-color);}
 
 #withdrawPointForm{padding-top: 20px;}
-#withdrawPoint .widthdraw_inner{position: relative;}
-#withdrawPoint .widthdraw_inner .widthdraw_tit{display: block; margin-bottom: 18px; font-size: 16px; font-weight: 700;}
-#withdrawPoint .widthdraw_inner #widthdrawAmount{display: block; width: 100%; margin-bottom: 50px; padding: 16px; background-color: var(--select-box-color); border-radius: 8px; font-size: 16px; font-weight: 500;}
-#withdrawPoint .widthdraw_inner .point_held{position: absolute; top: .5em; right: 0; font-size: 14px; font-weight: 700; color: var(--brand-dark-color);}
-#withdrawPoint .widthdraw_checkbox{position: absolute; top: 0; right: 0; font-weight: 500; color: #666;}
-#withdrawPoint .widthdraw_input{padding: 13px; width: calc(50% - 7px); margin-right: 7px; border-radius: 8px; background-color: var(--select-box-color); }
-#withdrawPoint .widthdraw_input:last-child{margin-right: 0; margin-left: 7px;}
-#withdrawPoint .widthdraw_input.account{margin: 14px 0 0; width: 100%;}
-#withdrawPoint .widthdraw_input_tit{display: block; margin-bottom: 0.5em; font-size: 13px; color: var(--placeholder);}
-#withdrawPoint .btn_select_bank{position: relative; display: block; width: 100%; font-size: 16px; color: var(--placeholder); text-align: left;}
+#withdrawPoint .withdrawal_inner{position: relative;}
+#withdrawPoint .withdrawal_inner .withdrawal_tit{display: block; margin-bottom: 18px; font-size: 16px; font-weight: 700;}
+#withdrawPoint .withdrawal_inner #withdrawalAmount{display: block; width: 100%; margin-bottom: 50px; padding: 16px; background-color: var(--select-box-color); border-radius: 8px; font-size: 16px; font-weight: 500;}
+#withdrawPoint .withdrawal_inner .point_held{position: absolute; top: .5em; right: 0; font-size: 14px; font-weight: 700; color: var(--brand-dark-color);}
+#withdrawPoint .withdrawal_checkbox{position: absolute; top: 0; right: 0; font-weight: 500; color: #666;}
+#withdrawPoint .withdrawal_input{padding: 13px; width: calc(50% - 7px); margin-right: 7px; border-radius: 8px; background-color: var(--select-box-color); }
+#withdrawPoint .withdrawal_input:last-child{margin-right: 0; margin-left: 7px;}
+#withdrawPoint .withdrawal_input.account{margin: 14px 0 0; width: 100%;}
+#withdrawPoint .withdrawal_input_tit{display: block; margin-bottom: 0.5em; font-size: 13px; color: var(--placeholder);}
+#withdrawPoint .btn_select_bank{position: relative; display: block; width: 100%; font-size: 16px; color: var(--placeholder); text-align: left; font-weight: 500;}
 #withdrawPoint .btn_select_bank::after{content: ""; position: absolute; top: 0%; right: 0; width: 20px; height: 20px; background: url("../images/icon/btn_select_arrow.svg") no-repeat center / cover;}
+#withdrawPoint .withdrawal_input .withdrawal_select_bank{position: absolute; top: 95px; left: 0; width: calc(50% - 7px); background-color: #F7F8FA; border-radius: 0 0 8px 8px; overflow: hidden; max-height: 0; visibility: hidden; transition: all .3s;}
+#withdrawPoint .withdrawal_input .withdrawal_select_bank.on{max-height: 1000px; visibility: visible;}
+#withdrawPoint .withdrawal_input .withdrawal_select_bank li{padding: .5em 0; text-align: center; color: #666; border-bottom: 1px solid var(--line-color);}
+#withdrawPoint .withdrawal_input .withdrawal_select_bank li:first-child{border-top: 1px solid var(--line-color);}
+#withdrawPoint .withdrawal_input .withdrawal_select_bank li:last-child{border-bottom: none;}
+#withdrawPoint .withdrawal_input input{font-weight: 500;}
 #withdrawPoint #depositor{font-size: 16px;}
-#withdrawPoint .widthdraw_detail{margin-top: 32px;}
-#withdrawPoint .widthdraw_detail ul{padding: 24px 0; border-top: 1px solid var(--line-color); border-bottom: 1px solid var(--line-color);}
-#withdrawPoint .widthdraw_detail ul li{display:-webkit-box; display:-ms-flexbox; display:-webkit-flex; display:flex; justify-content: space-between; -webkit-justify-content: space-between; align-items: center; -webkit-align-items: center; margin-bottom: 15px;}
-#withdrawPoint .widthdraw_detail ul li:last-child{margin-bottom: 0;}
-#withdrawPoint .widthdraw_detail ul li span{font-size: 14px; color: var(--non-emphasize-color);}
-#withdrawPoint .widthdraw_detail ul li strong{ font-size: 16px;}
+#withdrawPoint .withdrawal_detail{margin-top: 32px;}
+#withdrawPoint .withdrawal_detail ul{padding: 24px 0; border-top: 1px solid var(--line-color); border-bottom: 1px solid var(--line-color);}
+#withdrawPoint .withdrawal_detail ul li{display:-webkit-box; display:-ms-flexbox; display:-webkit-flex; display:flex; justify-content: space-between; -webkit-justify-content: space-between; align-items: center; -webkit-align-items: center; margin-bottom: 15px;}
+#withdrawPoint .withdrawal_detail ul li:last-child{margin-bottom: 0;}
+#withdrawPoint .withdrawal_detail ul li span{font-size: 14px; color: var(--non-emphasize-color);}
+#withdrawPoint .withdrawal_detail ul li strong{ font-size: 16px;}
 #withdrawPoint .total_amount{display:-webkit-box; display:-ms-flexbox; display:-webkit-flex; display:flex; justify-content: space-between; -webkit-justify-content: space-between; align-items: center; -webkit-align-items: center; margin-bottom: 15px; padding-top: 24px;}
 #withdrawPoint .total_amount span{font-size: 14px;}
 #withdrawPoint .total_amount strong{font-size: 20px;}
-#withdrawPoint .widthdraw_notice{margin-top: 32px; margin-bottom: 150px; padding: 18px; background-color: #F7F8FA; font-size: 13px; line-height: 22px; color: #9C9CA8;}
-#withdrawPoint .widthdraw_notice li{position: relative; margin-bottom: .8em; padding-left: 20px;}
-#withdrawPoint .widthdraw_notice li::after{content: ""; position: absolute; top: 0.5em; left: 0; width: 2px; height: 2px; background-color: #9C9CA8;}
-#withdrawPoint .widthdraw_notice li:last-child{margin-bottom: 0;}
+#withdrawPoint .withdrawal_notice{margin-top: 32px; margin-bottom: 150px; padding: 18px; background-color: #F7F8FA; font-size: 13px; line-height: 22px; color: #9C9CA8;}
+#withdrawPoint .withdrawal_notice li{position: relative; margin-bottom: .8em; padding-left: 20px;}
+#withdrawPoint .withdrawal_notice li::after{content: ""; position: absolute; top: 0.5em; left: 0; width: 2px; height: 2px; background-color: #9C9CA8;}
+#withdrawPoint .withdrawal_notice li:last-child{margin-bottom: 0;}
 
-#withdrawPoint .widthdraw_input .widthdraw_select_bank{position: absolute; top: 95px; left: 0; width: calc(50% - 7px); background-color: #F7F8FA; border-radius: 0 0 8px 8px; overflow: hidden; max-height: 0; visibility: hidden; transition: all .3s;}
-#withdrawPoint .widthdraw_input .widthdraw_select_bank.on{max-height: 1000px; visibility: visible;}
-#withdrawPoint .widthdraw_input .widthdraw_select_bank li{padding: .5em 0; text-align: center; color: #666; border-bottom: 1px solid var(--line-color);}
-#withdrawPoint .widthdraw_input .widthdraw_select_bank li:first-child{border-top: 1px solid var(--line-color);}
-#withdrawPoint .widthdraw_input .widthdraw_select_bank li:last-child{border-bottom: none;}
+#withdrawalResult{text-align: center;}
+#withdrawalResult img{margin: 70px auto 20px;}
+#withdrawalResult h1 + p{padding: .5em 0 1em; font-size: 14px; line-height: 20px;}
+#withdrawalResult .withdrawal_result_inner{padding: 18px; margin-bottom: 54px; background-color: #fff; border-radius: 12px; text-align: left;}
+#withdrawalResult .withdrawal_result_inner h2{padding-bottom: 1em; font-size: 16px; color: #666;}
+#withdrawalResult .withdrawal_result_list{padding: 1em 0; border-top: 1px solid var(--line-color); border-bottom: 1px solid var(--line-color);}
+#withdrawalResult .withdrawal_result_list li{display:-webkit-box; display:-ms-flexbox; display:-webkit-flex; display:flex; justify-content: space-between; -webkit-justify-content: space-between; align-items: center; -webkit-align-items: center; padding-bottom: 1.2em;}
+#withdrawalResult .withdrawal_result_list li span{color: #666;}
+#withdrawalResult .withdrawal_result_list li strong{font-size: 16px; font-weight: 500;}
+#withdrawalResult .withdrawal_total{display:-webkit-box; display:-ms-flexbox; display:-webkit-flex; display:flex; justify-content: space-between; -webkit-justify-content: space-between; align-items: center; -webkit-align-items: center; padding-top: 1em;}
+#withdrawalResult .withdrawal_total span{font-weight: 500;}
+#withdrawalResult .withdrawal_total strong{font-size: 20px;;}
+#withdrawalResult .btn_basic.pale{font-size: 18px; font-weight: 700;}
 
+#mypage .profile{padding-top: 20px; align-items: center; -webkit-align-items: center;}
+#mypage .profile img{width: 56px; margin-right: 18px;}
+#mypage .profile_txt strong{display: block; padding-bottom: 0.3em; font-size: 18px; font-weight: 700;}
+#mypage .profile_txt span{font-size: 14px; color: #999;}
+#mypage .point_held{position: relative; margin: 26px 14px; padding: 18px; padding-right: 40px; border-radius: 12px; background-color: var(--select-box-color);}
+#mypage .point_held::after{content: ""; position: absolute; top: 50%; right: 16px; transform: translateY(-50%); width: 20px; height: 20px; background: url("../images/icon/btn_arrow_right.svg");}
+#mypage .point_held span{font-size: 14px; font-weight: 600;}
+#mypage .point_held strong{font-size: 18px;}
+#mypage .mypage_util{padding-bottom: 30px; margin-bottom: 10px; border-bottom: 1px solid var(--line-color);}
+#mypage .mypage_util li{width: calc(100% / 4); font-size: 14px; text-align: center;}
+#mypage .mypage_util img{display: block; margin: 0 auto 10px;}
+#mypage .mypage_util span{font-weight: 500; margin-right: 5px;}
+#mypage .mypage_menu li{padding: 20px 0; font-size: 16px;}
+#mypage .mypage_menu li img{margin-right: 16px;}
+
+#editProfile .edit_profile_img{position: relative; width: 114px; height: 114px; margin: 26px auto 0;}
+#editProfile .edit_profile_img::before{content: ""; position: absolute; bottom: 0; right: 0; width: 34px; height: 34px; border-radius: 50%; background: #fff url("../images/icon/btn_edit_img.svg") no-repeat center / cover; background-size: 18px; box-shadow: 0px 4px 4px #00000025;}
+#editProfile .edit_profile_img img{width: 100%;}
+#editProfile .edit_profile_img label{position: absolute; top: 0; left: 0; width: 100%; height: 100%; cursor: pointer;}
+#editProfile .edit_procile_list{margin-top: 46px;}
+#editProfile .edit_procile_list li{display:-webkit-box; display:-ms-flexbox; display:-webkit-flex; display:flex; justify-content: space-between; -webkit-justify-content: space-between; align-items: center; -webkit-align-items: center; padding: 20px 0; border-bottom: 1px solid var(--line-color);}
+#editProfile .edit_procile_list label, #editProfile .edit_procile_list a{font-size: 16px; font-weight: 600;}
+#editProfile .edit_procile_list input{font-size: 16px; font-weight: 500; text-align: right; color: #888;}
+
+main#settingAlarm{padding: 48px 0;}
+#settingAlarm .setting_alarm_notice{position: relative; padding: 15px 46px; background-color: #EEF2F8; font-size: 13px; line-height: 1.2; color: #999;}
+#settingAlarm .setting_alarm_notice::before{content: ""; position: absolute; top: 15px; left: 20px; width: 20px; height: 20px; background: url("../images/icon/notice.svg") no-repeat center / cover;}
+#settingAlarm .setting_alarm_notice .color_blue{font-weight: 700;}
+#settingAlarm .setting_list{padding: 0 18px;}
+#settingAlarm .setting_list li{display:-webkit-box; display:-ms-flexbox; display:-webkit-flex; display:flex; justify-content: space-between; -webkit-justify-content: space-between; align-items: center; -webkit-align-items: center; padding: 18px 0; border-bottom: 1px solid var(--line-color)}
+#settingAlarm .setting_list li:last-child{border-bottom-color: transparent;}
+#settingAlarm .setting_list li strong{display: block; padding-bottom: .5em; font-size: 16px; font-weight: 500;}
+#settingAlarm .setting_list li span{font-size: 14px; line-height: 20px; color: #999;}
+
+#inquiry .inquiry_tablist li{width: 50%; height: 42px; line-height: 42px; text-align: center; border-bottom: 3px solid transparent;}
+#inquiry .inquiry_tablist li button{font-size: 15px; font-weight: 700; color: var(--non-emphasize-color);}
+#inquiry .inquiry_tablist li button span{margin-left: 5px;}
+#inquiry .inquiry_tablist li.on{border-bottom-color: var(--brand-color);}
+#inquiry .inquiry_tablist li.on button{color: #333;}
+#inquiry .inquiry > div{padding: 20px 0;}
+#inquiry .inquiry .ask{position: relative;}
+#inquiry .inquiry .ask::before{content: ""; position: absolute; bottom: 20px; right: 20px; width: 20px; height: 20px; background: url("../images/icon/btn_select_arrow.svg") no-repeat center / cover; opacity: .5;}
+#inquiry .inquiry_top{display:-webkit-box; display:-ms-flexbox; display:-webkit-flex; display:flex; justify-content: space-between; -webkit-justify-content: space-between; align-items: center; -webkit-align-items: center; padding-bottom: 14px;}
+#inquiry .inquiry_top .inquiry_status{padding: .5em 15px; border-radius: 14px; background-color: #ccc; color: #fff;}
+#inquiry .inquiry_top .inquiry_date{font-size: 14px; color: #bbb;}
+#inquiry .inquiry_btm{width: 87.5%;}
+#inquiry .inquiry_tit{padding-bottom: 0.5em; font-size: 16px;}
 

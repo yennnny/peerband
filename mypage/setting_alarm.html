@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <title> 알림설정 - peerband </title>
+  <link rel="stylesheet" href="../assets/css/common.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <script src="../assets/js/script.js" defer></script>
+</head>
+
+<body>
+  <header id="header">
+    <button type="button" class="btn_back" onclick="goBack()">
+      <img src="../assets/images/icon/btn_back.svg" alt="뒤로가기">
+    </button>
+    <h1 class="title">알림설정</h1>
+  </header>
+  <main id="settingAlarm">
+    <p class="setting_alarm_notice">푸시 알림받기 설정이 되지 않거나 알림이 오지 않는다면
+      <span class="color_blue">아이폰>설정>알림</span>에서 피어밴드 알림 허용을 확인해주세요.</p>
+    <ul class="setting_list">
+      <li>
+        <p>
+          <strong>설명이 필요한 알림</strong>
+          <span>SMS/푸시/이메일을 통해 이벤트 또는<br>혜택 정보를 받아볼 수 있습니다.</span>
+        </p>
+        <button type="button" class="btn_on_off on"></button>
+      </li>
+      <li>
+        <strong>설명 필요없는 알림</strong>
+        <button type="button" class="btn_on_off on"></button>
+      </li>
+      <li>
+        <p>
+          <strong>설명이 필요한 알림</strong>
+          <span>SMS/푸시/이메일을 통해</span>
+        </p>
+        <button type="button" class="btn_on_off"></button>
+      </li>
+      <li>
+        <strong>설명 필요없는 알림</strong>
+        <button type="button" class="btn_on_off"></button>
+      </li>
+    </ul>
+    <script>
+      const $btnOnOff = document.querySelectorAll('.btn_on_off');
+      $btnOnOff.forEach((box) => {
+        box.addEventListener('click', function () {
+          if (this.classList.contains('on')) this.classList.remove('on');
+          else this.classList.add('on');
+        });
+      })
+    </script>
+  </main>
+</body>
+
+</html>

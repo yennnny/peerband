@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, u-scalable=0">
+  <title> 내 정보 수정 - peerband </title>
+  <link rel="stylesheet" href="../assets/css/common.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <script src="../assets/js/script.js" defer></script>
+</head>
+
+<body>
+  <header id="header">
+    <button type="button" class="btn_back" onclick="goBack()">
+      <img src="../assets/images/icon/btn_back.svg" alt="뒤로가기">
+    </button>
+    <h1 class="title">내 정보 수정</h1>
+  </header>
+  <main id="editProfile">
+    <form action="" id="editProfileForm" name="editProfileForm">
+      <div class="edit_profile_img">
+        <img src="../assets/images/icon/profile_basic.svg" alt="" class="img_basic">
+        <input type="file" name="uImg" id="uImg" class="blind">
+        <label for="uImg"></label>
+      </div>
+      <ul class="edit_procile_list">
+        <li>
+          <label for="uName">성명</label>
+          <input type="text" id="uName" name="uName" value="홍길동">
+        </li>
+        <li>
+          <label for="uBirthday">생년월일</label>
+          <input type="date" id="uBirthday" name="uBirthday" value="2020-01-23">
+        </li>
+        <li>
+          <label for="uGender">성별</label>
+          <input type="text" id="uGender" name="uGender" value="여성">
+        </li>
+        <li>
+          <label for="uId">아이디</label>
+          <input type="text" id="uId" name="uId" value="ghdrlfehd123@gmail.com">
+        </li>
+        <li>
+          <label for="uCompany">회사명</label>
+          <input type="text" id="uCompany" name="uCompany" value="HY SOFT">
+        </li>
+        <li>
+          <label for="uDepartment">부서</label>
+          <input type="text" id="uDepartment" name="uDepartment" value="마케팅팀">
+        </li>
+        <li><a href="">비밀번호 재설정</a></li>
+        <li><a href="">로그아웃</a></li>
+      </ul>
+    </form>
+  </main>
+</body>
+
+</html>
