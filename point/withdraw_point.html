@@ -23,7 +23,7 @@
             <div class="withdrawal_inner">
                 <p class="point_held">보유 포인트: <span>117,000</span>P</p>
                 <label for="withdrawalAmount" class="withdrawal_tit">출금 금액</label>
-                <input type="text" id="withdrawalAmount" name="withdrawalAmount" placeholder="출금금액을 입력해주세요">
+                <input type="number" id="withdrawalAmount" name="withdrawalAmount" placeholder="출금금액을 입력해주세요">
             </div>
             <div class="withdrawal_inner">
                 <p class="withdrawal_tit">입금 계좌정보</p>
@@ -32,9 +32,10 @@
                     <label for="SavingAccount">계좌정보 저장</label>
                 </div>
                 <div class="withdrawal_input_wrap flex">
-                    <div class="withdrawal_input">
-                        <p class="withdrawal_input_tit">은행 선택</p>
-                        <button type="button" class="btn_select_bank">선택해주세요</button>
+                    <div class="withdrawal_input bank">
+                        <label for="bankName" class="withdrawal_input_tit">은행 선택</label>
+                        <input type="text" id="bankName" name="bankName" placeholder="선택해주세요">
+                        <button type="button" class="btn_select_bank"></button>
                         <ul class="withdrawal_select_bank">
                             <li><button type="button">국민은행</button></li>
                             <li><button type="button">NH농협은행</button></li>
@@ -55,7 +56,7 @@
                 </div>
             </div>
         </form>
-        <div class="withdrawal_detail">
+        <div class="withdrawal_detail on">
             <ul>
                 <li><span>차감 포인트</span><strong>50,000원</strong></li>
                 <li><span>입금수수료</span><strong>1,000원</strong></li>
@@ -68,13 +69,19 @@
             <li>출금 시, <span class="color_blue">입금수수료</span>가 차감되어 입금됩니다.</li>
             <li><span class="color_blue">계좌정보가 올바르지 않는 경우</span> 출금신청이 <span class="color_blue">취소되거나 지연</span>될 수 있으므로 주의해주세요.</li>
         </ul>
-        <div class="wrap_btn_btm"><button type="submit" class="btn_basic disabled">출금신청하기</button></div>
+        <div class="wrap_btn_btm"><a href="./withdraw_result.html" class="btn_basic btn_tg disabled">출금신청하기</a></div>
     </main>
     <script>
         document.querySelector('.btn_select_bank').addEventListener('click', function(){
-            if(!this.nextElementSibling.classList.contains('on')) this.nextElementSibling.classList.add('on');
-            else this.nextElementSibling.classList.remove('on');
+            if(!this.parentNode.classList.contains('on')) this.parentNode.classList.add('on');
+            else this.parentNode.classList.remove('on');
         });
+        document.querySelector('.withdrawal_select_bank').addEventListener('click', function(e){
+            const selectBank = e.target.innerHTML;
+            document.getElementById('bankName').value = selectBank;
+            document.querySelector('.withdrawal_input.bank').classList.remove('on')
+        });
+        
     </script>
 </body>
 

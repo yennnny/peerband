@@ -1,41 +1,68 @@
 <!DOCTYPE html>
 <html lang="ko">
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <title> 피어밴드 </title>
-  </head>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <title> 알림함 - peerband </title>
+  <link rel="stylesheet" href="../assets/css/common.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <script src="../assets/js/script.js" defer></script>
+</head>
+
 <body>
   <header id="header">
-    <h1>회사공지</h1>
-    <button type="button">
-      <span class="blind">검색</span>
-    </button>
-    <button type="button">
-      <span class="blind">알림 아이콘</span>
-    </button>
+    <h1 class="title">공지사항</h1>
   </header>
-  <section id="notice">
-    <p>공지글</p><span>29</span>
-    <div class="img_slider"><img src="" alt=""></div>
-
-    <div class="notice_board">
-      <!-- 공지 있을 경우 blind 클래스명 제거  -->
-      <p class="notice_nothing blind">등록된 회사공지가 없습니다.</p>
-      <div class="board_cnt">
-        <strong class="tit">HYSOFT 가을 워크샵!</strong>
-        <p>2022년 상반기 매출 100억원 달성 기념으로 10월 1일 ~ 2일까지 1박 2일로 워크샵을 진행할 예정입니다. 임직원분들은 일정 참고 부탁드리며 </p>
+  <main id="notice"> <!-- 읽은 공지사항은 li 태그에 class "on" 추가 -->
+    <div class="notice_body">
+      <div class="nothing_box">
+        <p>등록된 공지사항이 없습니다.<br>
+          새로운 공지글을 작성해주세요!</p>
       </div>
-      <div class="board_btm">
-        <ul class="board_btm_btn_wrap">
-          <li><button type="button" class="see">193</button></li>
-          <li><button type="button" class="good">35</button></li>
-          <li><button type="button" class="coment">89</button></li>
-        </ul>
-        <span>6시간전</span>
-      </div>
+      <ul class="notice_list">
+        <li>
+          <a href="./notice_detail.html">
+            <span class="notice_tit">피어밴드 이벤트안내!</span>
+            <span class="notice_txt">소장 가치 높은(?) 역사적 자료 팝니다! 소장 가치 높은(?) 역사적 자료 팝니다!</span>
+            <span class="notice_date">3일 전</span>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <span class="notice_tit">피어밴드 이벤트안내!</span>
+            <span class="notice_txt">소장 가치 높은(?) 역사적 자료 팝니다!</span>
+            <span class="notice_date">3일 전</span>
+          </a>
+        </li>
+        <li class="on"> <!-- 예시로 on 추가함 -->
+          <a href="">
+            <span class="notice_tit">피어밴드 이벤트안내!</span>
+            <span class="notice_txt">소장 가치 높은(?) 역사적 자료 팝니다!</span>
+            <span class="notice_date">3일 전</span>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <span class="notice_tit">피어밴드 이벤트안내!</span>
+            <span class="notice_txt">소장 가치 높은(?) 역사적 자료 팝니다!</span>
+            <span class="notice_date">3일 전</span>
+          </a>
+        </li>
+      </ul>
     </div>
-  </section>  
+    <nav id="gnbBtm">
+      <ul class="flex">
+        <li><a href="../home.html"><span class="blind">홈</span></a></li>
+        <li class="on"><a href="../notice/notice.html"><span class="blind">공지사항</span></a></li>
+        <li><a href="../board/post_board.html"><span class="blind">게시글 쓰기</span></a></li>
+        <li><a href="../point/index.html"><span class="blind">나의 포인트</span></a></li>
+        <li><a href="../mypage/index.html"><span class="blind">프로필</span></a></li>
+      </ul>
+    </nav>
+  </main>
+    
 </body>
+
 </html>

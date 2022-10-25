@@ -13,11 +13,11 @@
 
 <body>
   <header id="header">
-    <button type="button" class="btn_back" onclick="goBack()">
+    <button type="button" class="btn_back">
       <img src="../assets/images/icon/btn_back.svg" alt="뒤로가기">
     </button>
     <h1 class="title">게시물등록</h1>
-    <button type="button" class="btn_post">등록</button>
+    <button type="button" class="btn_post btn_tg">등록</button>
   </header>
   <main id="postBoard">
     <p class="holding_point">보유 포인트 <span>117,000</span>P</p>
@@ -38,20 +38,20 @@
     <div class="post_board_txt_wrap">
       <h2 class="post_board_tit">글작성</h2>
       <form id="postBoardForm" name="postBoardForm" action="">
-        <div class="post_board_txt_wrap">
+        <div class="post_board_txt">
           <input type="text" id="postigTit" name="postigTit" placeholder="제목을 입력해주세요 (??자 이내)">
           <label for="postigTit" class="blind">게시글 제목</label>
         </div>
         <div class="post_textarea" contenteditable="true" placeholder="칭찬하실 내용을 입력해주세요"></div>
         <!-- 이미지 넣음 예시
-          <div class="post_textarea" contenteditable="true" placeholder="칭찬하실 내용을 입력해주세요">
-          <div class="post_img">
-            <img src="../assets/images/board/example_board.jpg" alt="">
-            <button type="button" class="btn_delete">
-              <img src="../assets/images/icon/btn_delete_circle.svg" alt="">
-            </button>
-          </div>
-        </div> -->
+        <div class="post_textarea" contenteditable="true" placeholder="칭찬하실 내용을 입력해주세요">
+        <div class="post_img">
+          <img src="../assets/images/board/example_board.jpg" alt="">
+          <button type="button" class="btn_delete">
+            <img src="../assets/images/icon/btn_delete_circle.svg" alt="">
+          </button>
+        </div>
+      </div> -->
       </form>
       <div class="btn_add_img">
         <input type="file" name="postImg" id="postImg" class="blind">
@@ -59,11 +59,44 @@
       </div>
     </div>
   </main>
+  <section id="pickMember" class="popup_full">
+    <header id="popHeader">
+      <button type="button" class="btn_back">
+        <img src="../assets/images/icon/btn_back.svg" alt="">
+      </button>
+      <h2 class="title">직원 선택하기</h2>
+    </header>
+    <div class="popup_full_wrap">
+      <form action="" id="pickMemberForm" name="pickMemberForm">
+        <input id="pickMemberName" name="pickMemberName" type="text" placeholder="직원 이름을 검색해주세요">
+        <label for="pickMemberName" class="blind">검색어</label>
+        <button type="reset" class="btn_reset">
+          <img src="../assets/images/icon/btn_delete_circle.svg" alt="">
+        </button>
+      </form>
+      <div id="pickmemberList">
+        <ul class="member_list">
+          <li><img src="../assets/images/icon/profile_basic.svg" alt="" class="img_profile"><div class="member_txt"><strong class="member_name">김정석</strong><span class="member_dept">마케팅팀</span></div></li>
+          <li><img src="../assets/images/icon/profile_basic.svg" alt="" class="img_profile"><div class="member_txt"><strong class="member_name">김정석</strong><span class="member_dept">마케팅팀</span></div></li>
+          <li><img src="../assets/images/icon/profile_basic.svg" alt="" class="img_profile"><div class="member_txt"><strong class="member_name">김정석</strong><span class="member_dept">마케팅팀</span></div></li>
+          <li><img src="../assets/images/icon/profile_basic.svg" alt="" class="img_profile"><div class="member_txt"><strong class="member_name">김정석</strong><span class="member_dept">마케팅팀</span></div></li>
+          <li><img src="../assets/images/icon/profile_basic.svg" alt="" class="img_profile"><div class="member_txt"><strong class="member_name">김정석</strong><span class="member_dept">마케팅팀</span></div></li>
+        </ul>
+      </div>
+    </div>
+  </section>
   <script>
+    // textarea 안에 텍스트가 많아질수록 height값 조정.
     const $textarea = document.querySelector('.post_textarea');
     $textarea.addEventListener('keyup', function(){
       $textarea.style.height = this.scrollHeight + 'px';      
     });
+    // 뒤로가기
+    document.querySelector('#pickMember .btn_back').addEventListener('click', function(){
+      document.getElementById('pickMember').classList.remove('on')
+    });
+    // 직원 선택
+    document.querySelector('.btn_choice_recipient').addEventListener('click', function(){ document.querySelector('.popup_full').classList.add('on'); });
   </script>
 </body>
 

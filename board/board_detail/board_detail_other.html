@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport"  content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <title> 게시물 상세 - peerband </title>
+  <link rel="stylesheet" href="../../assets/css/common.css">
+  <link rel="stylesheet" href="../../assets/css/style.css">
+  <script src="../../assets/js/script.js" defer></script>
+</head>
+
+<body>
+  <header id="header">
+    <button type="button" class="btn_back">
+      <img src="../../assets/images/icon/btn_back.svg" alt="">
+    </button>
+    <h1 class="title">게시물 상세</h1>
+    <div class="util">
+      <a href="../search_board.html" class="btn_search">
+        <img src="../../assets/images/icon/btn_search.svg" alt="검색">
+      </a>
+      <button type="button" class="btn_siren">
+        <img src="../../assets/images/icon//btn_siren.svg" alt="신고">
+      </button>
+    </div>
+  </header>
+  <main id="boardDetail">
+    <div class="board_cnt">
+      <div class="board_top flex_between">
+        <div class="board_writer flex_center">
+          <img src="../../assets/images/icon/profile_basic.svg" alt="하늘색 배경의 프로필 기본 이미지" class="img_profile">
+          <div class="board_writer_info">
+            <strong class="board_writer_name tit4">홍길동</strong>
+            <p class="board_writer_dept">마케팅팀</p>
+          </div>
+        </div>
+        <p class="board_time">6시간 전</p>
+      </div>
+      <div class="board_mid">
+        <div class="board_gift">
+          <div class="board_recipient flex">
+            <img src="../../assets/images/icon/profile_basic.svg" alt="하늘색 배경의 프로필 기본 이미지" class="img_profile">
+            <div class="board_recipient_info">
+              <span class="board_writer_dept">마케팅팀</span>
+              <strong class="board_writer_name">이민석</strong>
+              님에게<br>
+              <span class="point">5,000포인트</span>를 선물했어요
+            </div>
+          </div>
+        </div>
+        <div class="board_txt_wrap">
+          <h4 class="board_tit">마케팅팀 이민석 회원을 칭찬해요!</h4>
+          <p class="board_txt txt1">
+            세줄이 넘는 긴 글이 있을 때 어떻게 보여줄지 적어보고 있을게요. 마케팅팀 이민석 회원님을 칭찬해요 저번에 어쩌고 저쩌고 너무 잘해주셔서 너무 고마웠어요 ㅎㅎ 감동입니다. 그리고 어쩌구 저쩌구
+          </p>
+          <button type="button" class="btn_more_txt">더보기</button>
+        </div>
+      </div>
+      <div class="board_btm">
+        <ul class="board_util flex">
+          <li class="board_util_hits">
+            <span>224</span>
+          </li>
+          <li class="board_util_comments">
+            <span>24</span>
+          </li>
+          <li class="board_util_like on">
+            <button type="button" class="btn_board_util">
+              <span>125</span>
+            </button>
+          </li>
+          <li class="board_util_clap on">
+            <button type="button" class="btn_board_util">
+              <span>16</span>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <section class="comment_cnt">
+      <div class="comment_tit">
+        <h3>댓글</h3>
+        <p>(<span class="comment_num">12</span>)</p>
+      </div>
+      <div class="comment_wrap">
+        <div class="comment me">
+          <div class="comment_inner">
+            <img src="../../assets/images/icon/profile_basic.svg" alt="하늘색 배경의 프로필 기본 이미지" class="img_profile">
+            <div class="comment_txt_wrap">
+              <div class="comment_top">
+                <strong class="comment_writer_name">이민석</strong>
+                <span class="comment_time">44분 전</span>
+              </div>
+              <p class="comment_txt">우와 !! 감사해요!!</p>
+              <ul class="comment_util">
+                <li><button type="button" class="btn_like_comment">좋아요</button></li>
+                <li><button type="button" class="btn_delete_comment">삭제하기</button></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="comment">
+          <div class="comment_inner">
+            <img src="../../assets/images/icon/profile_basic.svg" alt="하늘색 배경의 프로필 기본 이미지" class="img_profile">
+            <div class="comment_txt_wrap">
+              <div class="comment_top">
+                <strong class="comment_writer_name">홍길동</strong>
+                <span class="comment_time">44분 전</span>
+              </div>
+              <p class="comment_txt">저도 동감해요 ㅋㅋ 박수 보내요~ 보통은 3주정도 보는거 같아요! 그리고 음냐음냐 뭐라고말하지 50글자까지 가능해요 이건몇글자지..?</p>
+              <ul class="comment_util">
+                <li><button type="button" class="btn_like_comment">좋아요</button></li>
+                <li><button type="button" class="btn_delete_comment">삭제하기</button></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <!-- <script>
+    document.querySelector('textarea').onfocus = function () {
+      if(!this.closest('.comment_pop').classList.contains('on')) this.closest('.comment_pop').classList.add('on');
+    }
+    document.querySelector('textarea').onblur = function () {
+      document.querySelector('.comment_pop').classList.remove('on');
+    }
+    document.querySelector('.btn_close').addEventListener('click', function(){
+      document.querySelector('.comment_pop').classList.remove('on');
+      document.querySelector('textarea')[0].blur();
+    });
+  </script> -->
+</body>
+
+</html>

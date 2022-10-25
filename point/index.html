@@ -18,7 +18,7 @@
             <button type="button" class="btn_search">
                 <img src="../assets/images/icon/btn_search.svg" alt="검색">
             </button>
-            <button type="button" class="btn_alarm on">
+            <button type="button" class="btn_alarm">
                 <img src="../assets/images/icon//btn_alarm.svg" alt="알림">
             </button>
         </div>
@@ -29,21 +29,23 @@
                 <span class="point_num">117,000P</span>
             </h2>
             <ul class="flex">
-                <li><a href="">출금하기</a></li>
+                <li><a href="./withdraw_point.html">출금하기</a></li>
                 <li><a href="">기부하기</a></li>
             </ul>
         </div>
-        <div class="point_history_wrap "><!-- nothing 클래스명을 가지면.. -->
+        <div class="point_history_wrap ">
+            <!-- nothing 클래스명을 가지면.. -->
             <div class="point_history_nothing">
                 <p class="tit2">거래내역이 없습니다.</p>
             </div>
             <div class="point_history_something">
-                <ul class="point_history_filter flex">
+                <ul class="point_history_filter board_filter flex">
                     <li class="on"><button type="button">최신순</button></li>
                     <li><button type="button">과거순</button></li>
                 </ul>
                 <ul class="point_history_list">
-                    <li class="point_history plus"> <!-- plus 클래스명이 있다면 포인트 색상 변경 -->
+                    <li class="point_history plus">
+                        <!-- plus 클래스명이 있다면 포인트 색상 변경 -->
                         <div class="point_left">
                             <strong class="point_history_tit">홍길동님 적립</strong>
                             <span class="point_history_date">2022.07.24</span>
@@ -78,29 +80,40 @@
         </div>
         <nav id="gnbBtm">
             <ul class="flex">
-                <li><a href=""><span class="blind">홈</span></a></li>
-                <li><a href=""><span class="blind">회사공지</span></a></li>
-                <li><a href=""><span class="blind">게시글 쓰기</span></a></li>
-                <li class="on"><a href=""><span class="blind">나의 포인트</span></a></li>
-                <li><a href=""><span class="blind">프로필</span></a></li>
+                <li><a href="../home.html"><span class="blind">홈</span></a></li>
+                <li><a href="../notice/index.html"><span class="blind">공지사항</span></a></li>
+                <li><a href="../board/post_board.html"><span class="blind">게시글 쓰기</span></a></li>
+                <li class="on"><a href="../point/index.html"><span class="blind">나의 포인트</span></a></li>
+                <li><a href="../mypage/index.html"><span class="blind">프로필</span></a></li>
             </ul>
         </nav>
     </main>
 
-    <section class="popup2 saving">
+    <section class="popup popup2 on" id="popSaving">
         <h2 class="pop_tit">홍길동님 적립</h2>
         <div class="pop_wrap">
             <ul>
                 <li class="served_time"><span>적립시간</span><strong>2022.09.20 10:22:11</strong></li>
-                <li class="served_count"><span>적립금액</span><strong class="plus">+100,000P</strong></li> <!-- plus면 color 파란색, minus면 빨간색 -->
+                <li class="served_count plus"><span>적립금액</span><strong class="served_count_num">+100,000P</strong></li>
                 <li class="served_point"><span>적립 후 보유포인트</span><strong>117,000P</strong></li>
             </ul>
         </div>
         <div class="pop_btn">
-            <button type="button" class="btn_basic confirm">확인</button>
+            <button type="button" class="btn_basic btn_confirm">확인</button>
         </div>
     </section>
     <div id="dim"></div>
+    <script>
+        // 최신순 인기순 클릭 효과
+        document.querySelector('.board_filter').addEventListener('click', function (e) {
+            if (!e.target.parentNode.classList.contains('on')) {
+                document.querySelectorAll('.board_filter button').forEach(ele => {
+                    ele.parentNode.classList.remove('on');
+                    e.target.parentNode.classList.add('on');
+                });
+            }
+        });
+    </script>
 </body>
 
 </html>

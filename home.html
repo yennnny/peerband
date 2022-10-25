@@ -5,10 +5,12 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-  <title> peerband </title>
+  <title> 홈 - peerband </title>
+  <link rel="stylesheet" href="./assets/css/swiper.min.css">
   <link rel="stylesheet" href="./assets/css/common.css">
   <link rel="stylesheet" href="./assets/css/style.css">
-  <script src="./assets/js/script.js"></script>
+  <script src="./assets//js/swiper-bundle.min.js"></script>
+  <script src="./assets/js/script.js" defer></script>
 </head>
 
 <body class="blue">
@@ -22,9 +24,9 @@
       <button type="button" class="btn_search">
         <img src="./assets/images/icon/btn_search.svg" alt="검색">
       </button>
-      <button type="button" class="btn_alarm">
+      <a href="./notice/alarm.html" class="btn_alarm">
         <img src="./assets/images/icon//btn_alarm.svg" alt="알림">
-      </button>
+      </a>
     </div>
   </header>
   <main id="home">
@@ -45,10 +47,11 @@
       </div>
       <div class="hold_points_box flex_between">
         <strong>보유 포인트</strong>
-        <a href=""><span class="hold_points">117,000</span>P</a>
+        <a href="./point/index.html"><span class="hold_points">117,000</span>P</a>
       </div>
 
-      <div class="home_board "> <!-- 게시물이 없다면 .home_board에 class명 "nothing" 추가, 있다면 제거 -->
+      <div class="home_board ">
+        <!-- 게시물이 없다면 .home_board에 class명 "nothing" 추가, 있다면 제거 -->
         <div class="nothing_box">
           <p>등록된 게시물이 없습니다.<br>
             새로운 게시물을 작성해주세요!</p>
@@ -57,8 +60,8 @@
           <div class="board_head flex_between">
             <h3>게시물 <span class="board_sum">132</span></h3>
             <ul class="board_filter flex">
-              <li class="on"><button type="button">최신순</button></li>
-              <li><button type="button">인기순</button></li>
+              <li class="on"><button type="button" class="btn_order latest">최신순</button></li>
+              <li><button type="button" class="btn_order popular">인기순</button></li>
             </ul>
           </div>
           <div class="board_body">
@@ -88,26 +91,27 @@
                 <div class="board_txt_wrap">
                   <h4 class="board_tit">마케팅팀 이민석 회원을 칭찬해요!</h4>
                   <p class="board_txt txt1">
-                    세줄이 넘는 긴 글이 있을 때 어떻게 보여줄지 적어보고 있을게요. 마케팅팀 이민석 회원님을 칭찬해요 저번에 어쩌고 저쩌고 너무 잘해주셔서 너무 고마웠어요 ㅎㅎ 감동입니다. 그리고 어쩌구 저쩌구
+                    세줄이 넘는 긴 글이 있을 때 어떻게 보여줄지 적어보고 있을게요. 마케팅팀 이민석 회원님을 칭찬해요 저번에 어쩌고 저쩌고 너무 잘해주셔서 너무 고마웠어요 ㅎㅎ 감동입니다. 그리고
+                    어쩌구 저쩌구
                   </p>
                   <button type="button" class="btn_more">더보기</button>
                 </div>
               </div>
               <div class="board_btm">
                 <ul class="board_util flex">
-                  <li class="board_util_hits">                    
-                      <span>224</span>                    
+                  <li class="board_util_hits">
+                    <span>224</span>
                   </li>
                   <li class="board_util_comments">
-                      <span>24</span>
+                    <span>24</span>
                   </li>
-                  <li class="board_util_like on">
-                    <button type="button">
+                  <li class="board_util_like">
+                    <button type="button" class="btn_board_util">
                       <span>125</span>
                     </button>
                   </li>
-                  <li class="board_util_clap on">
-                    <button type="button">
+                  <li class="board_util_clap">
+                    <button type="button" class="btn_board_util">
                       <span>16</span>
                     </button>
                   </li>
@@ -137,14 +141,13 @@
                     </div>
                   </div>
                 </div>
-                <div class="board_img_wrap">
-                  <ul class="board_img">
-                    <li><img src="./assets/images/board/example_board.jpg" alt=""></li>
+                <div class="board_img_wrap swiper">
+                  <ul class="board_img swiper-wrapper">
+                    <li class="swiper-slide"><img src="./assets/images/board/example_board.jpg" alt=""></li>
+                    <li class="swiper-slide"><img src="./assets/images/board/example_board.jpg" alt=""></li>
+                    <li class="swiper-slide"><img src="./assets/images/board/example_board.jpg" alt=""></li>
                   </ul>
-                  <div class="board_img_num flex_center">
-                    <span>3</span>
-                    /<span>9</span>
-                  </div>
+                  <div class="board_img_num swiper-pagination flex_center"></div>
                 </div>
                 <div class="board_txt_wrap">
                   <h4 class="board_tit">마케팅팀 이민석 회원을 칭찬해요!</h4>
@@ -155,41 +158,62 @@
               </div>
               <div class="board_btm">
                 <ul class="board_util flex">
-                  <li class="board_util_hits">                    
-                      <span>224</span>                    
+                  <li class="board_util_hits">
+                    <span>224</span>
                   </li>
                   <li class="board_util_comments">
-                      <span>24</span>
+                    <span>24</span>
                   </li>
                   <li class="board_util_like on">
-                    <button type="button">
+                    <button type="button" class="btn_board_util">
                       <span>125</span>
                     </button>
                   </li>
                   <li class="board_util_clap on">
-                    <button type="button">
+                    <button type="button" class="btn_board_util">
                       <span>16</span>
                     </button>
                   </li>
                 </ul>
               </div>
             </div>
-            
+
           </div>
         </div>
       </div>
     </div>
     <nav id="gnbBtm">
       <ul class="flex">
-        <li class="on"><a href=""><span class="blind">홈</span></a></li>
-        <li><a href=""><span class="blind">회사공지</span></a></li>
-        <li><a href=""><span class="blind">게시글 쓰기</span></a></li>
-        <li><a href=""><span class="blind">나의 포인트</span></a></li>
-        <li><a href=""><span class="blind">프로필</span></a></li>
+        <li class="on"><a href="./home.html"><span class="blind">홈</span></a></li>
+        <li><a href="./notice/index.html"><span class="blind">공지사항</span></a></li>
+        <li><a href="./board/post_board.html"><span class="blind">게시글 쓰기</span></a></li>
+        <li><a href="./point/index.html"><span class="blind">나의 포인트</span></a></li>
+        <li><a href="./mypage/index.html"><span class="blind">프로필</span></a></li>
       </ul>
     </nav>
-
   </main>
+  <script>
+    // 최신순 인기순 클릭 효과
+    document.querySelector('.board_filter').addEventListener('click', function (e) {
+      if (!e.target.parentNode.classList.contains('on')) {
+        document.querySelectorAll('.btn_order').forEach(ele => {
+          ele.parentNode.classList.remove('on');
+          e.target.parentNode.classList.add('on');
+        });
+      }
+    });
+
+    // 이미지
+    const swiper = new Swiper('.swiper', {
+      loop: true,
+      speed: 400,
+      slidesPerView: 1,
+      pagination: {
+        el: '.swiper-pagination',
+        type : 'fraction'
+      }
+    });
+  </script>
 </body>
 
 </html>
