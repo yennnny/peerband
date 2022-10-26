@@ -42,13 +42,13 @@
       <a href="./pw/find_pw.html">비밀번호 찾기</a>
     </div>
   </main>
-  <script>
+  <script>    
     const loginBox = document.getElementById('login');
     const id_pw = document.querySelectorAll('input[type="text"], input[type="password"]');
     id_pw.forEach((idpw) => {
       idpw.addEventListener('focus', (e) => { 
         loginBox.classList.add('on');
-        window.scrollTop({ top: 0, behavior: 'smooth' })
+        window.scrollTo({ top: 0, behavior: 'smooth' })
       });
       idpw.addEventListener('blur', (e) => { 
         loginBox.classList.remove('on'); 
