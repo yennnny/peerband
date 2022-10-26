@@ -134,29 +134,18 @@
       </div>
     </section>
 
-    <div id="popDeleteBoard" class="popup">
-      <div class="pop_txt_wrap">
-        <h2 class="pop_tit">게시물 삭제</h2>
-        <p class="pop_txt">선물한 포인트는 다시 받을 수 없습니다.<br>
-          등록한 게시물을 삭제하시겠습니까?</p>
-      </div>
-      <ul class="pop_btn_wrap">
-        <li><button type="button" class="btn_undo">취소</button></li>
-        <li><button type="button" class="btn_do">삭제</button></li>
-      </ul>
-    </div>
-    <div id="popDeleteBoard" class="popup">
-      <div class="pop_txt_wrap">
-        <h2 class="pop_tit">게시물 삭제</h2>
-        <p class="pop_txt">선물한 포인트는 다시 받을 수 없습니다.<br>
-          등록한 게시물을 삭제하시겠습니까?</p>
-      </div>
-      <ul class="pop_btn_wrap">
-        <li><button type="button" class="btn_undo">취소</button></li>
-        <li><button type="button" class="btn_do">삭제</button></li>
-      </ul>
-    </div>
   </main>
+  <section id="popDeleteBoard" class="popup">
+    <div class="pop_txt_wrap">
+      <h2 class="pop_tit">게시물 삭제</h2>
+      <p class="pop_txt">선물한 포인트는 다시 받을 수 없습니다.<br>
+        등록한 게시물을 삭제하시겠습니까?</p>
+    </div>
+    <ul class="pop_btn_wrap">
+      <li><button type="button" class="btn_undo">취소</button></li>
+      <li><button type="button" class="btn_do">삭제</button></li>
+    </ul>
+  </section>
   <script>
     document.querySelector('textarea').onfocus = function () {
       if (!this.closest('.comment_pop').classList.contains('on')) this.closest('.comment_pop').classList.add('on');

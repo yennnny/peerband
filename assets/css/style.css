@@ -98,7 +98,7 @@ main#searchBoard{padding: 56px 0 0;}
 #postBoard .post_img{position: relative; border-radius: 10px;}
 #postBoard .post_img img{border-radius: 10px; width: 100%;}
 #postBoard .post_img .btn_delete{position: absolute; top: 12px; right: 12px; width: 32px; height: 32px; transform: none;}
-#postBoard .btn_add_img{position: fixed; bottom: 0; left: 0; width: 100%; height: 88px; background-color: #fff; text-align: center; z-index: 2;}
+#postBoard .btn_add_img{position: fixed; bottom: 0; left: 0; width: 100%; height: 54px; background-color: #fff; text-align: center; z-index: 2;}
 #postBoard #postImg + label{position: relative; display: inline-block; padding: 16px 0 16px 28px; cursor: pointer; font-size: 16px; color: #666;}
 #postBoard #postImg + label::after{content: ""; position: absolute; top: 50%; transform: translateY(-50%); left: 0; width: 20px; height: 20px; background: url("../images/icon/btn_add_img.svg") no-repeat center / cover;}
 
