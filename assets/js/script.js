@@ -66,6 +66,7 @@ if(document.querySelector('.btn_board_util')){
   });
 }
 
+// 더보기 버튼
 if(document.querySelector('.btn_more_txt')){
   document.querySelectorAll('.btn_more_txt').forEach(ele => {
     ele.addEventListener('click', function(e){
