@@ -9,11 +9,11 @@
 
 /**************************************************************** member ****************************************************************/
 /* 로그인하기 - member/index.html */
-main#login{width: 100%; height: calc(var(--vh, 1vh) * 100); overflow: hidden; padding: 0; transition: all .3s;}
-#login .login_img{width: 100%; max-width: 300px; /* margin: 58px auto 25px; */ margin: auto; min-height: 35vh; display: flex; }
+main#login{width: 100%; height: calc(var(--vh, 1vh) * 100);padding: 0; transition: all .3s;}
+#login .login_img{width: 100%; max-width: 300px; margin: 58px auto 25px;}
 #loginForm{padding: 35px 24px; border-radius: 20px 20px 0 0; background-color: #fff;}
 #loginForm .btn_basic{margin-top: 59px;}
-#login .login_link{padding-bottom: 50vh; background-color: #fff; color: #999;}
+#login .login_link{padding-bottom: 50px; background-color: #fff; color: #999;}
 #login .login_link a:first-child{margin-right: 15px;}
 #login .login_link a:last-child{margin-left: 15px;}
 #login.on .login_img{min-height: auto; max-height: 0; visibility: hidden; margin: 24px 0;}
