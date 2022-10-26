@@ -48,7 +48,7 @@
     id_pw.forEach((idpw) => {
       idpw.addEventListener('focus', (e) => { 
         loginBox.classList.add('on');
-        window.scrollTo({ top: 0, behavior: 'smooth' })
+        window.scrollTop({ top: 0, behavior: 'smooth' })
       });
       idpw.addEventListener('blur', (e) => { 
         loginBox.classList.remove('on'); 
