@@ -10,13 +10,15 @@
 /**************************************************************** member ****************************************************************/
 /* 로그인하기 - member/index.html */
 main#login{width: 100%; height: calc(var(--vh, 1vh) * 100);padding: 0; transition: all .3s;}
-#login .login_img{width: 100%; max-width: 300px; margin: 58px auto 25px;}
+#login .login_img{position: fixed; top: 40px; left: 50%; transform: translateX(-50%); width: 100%; max-width: 300px; opacity: 1; transform: opacity .35s;}
+#login .login_form{position: relative; transform: translateY(300px); transition: transform .3s;}
 #loginForm{padding: 35px 24px; border-radius: 20px 20px 0 0; background-color: #fff;}
 #loginForm .btn_basic{margin-top: 59px;}
 #login .login_link{padding-bottom: 50px; background-color: #fff; color: #999;}
 #login .login_link a:first-child{margin-right: 15px;}
 #login .login_link a:last-child{margin-left: 15px;}
-#login.on .login_img{min-height: auto; max-height: 0; visibility: hidden; margin: 24px 0;}
+#login.on .login_form{transform: translateY(50px);}
+#login.on .login_img{opacity: 0;}
 
 /*  아이디 찾기 member/id/find_id.html 
   비밀번호 찾기 member/pw/find_pw.html */ 
