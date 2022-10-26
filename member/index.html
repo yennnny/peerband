@@ -46,8 +46,13 @@
     const loginBox = document.getElementById('login');
     const id_pw = document.querySelectorAll('input[type="text"], input[type="password"]');
     id_pw.forEach((idpw) => {
-      idpw.addEventListener('focus', (e) => { loginBox.classList.add('on'); });
-      idpw.addEventListener('blur', (e) => { loginBox.classList.remove('on'); });
+      idpw.addEventListener('focus', (e) => { 
+        loginBox.classList.add('on');
+        window.scrollTo({ top: 0, behavior: 'smooth' })
+      });
+      idpw.addEventListener('blur', (e) => { 
+        loginBox.classList.remove('on'); 
+      });
     })
   </script>
 </body>

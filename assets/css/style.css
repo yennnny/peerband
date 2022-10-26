@@ -9,7 +9,7 @@
 
 /**************************************************************** member ****************************************************************/
 /* 로그인하기 - member/index.html */
-main#login{width: 100%; height: 100vh; overflow: hidden; padding: 0; transition: all .3s;}
+main#login{width: 100%; height: calc(var(--vh, 1vh) * 100); overflow: hidden; padding: 0; transition: all .3s;}
 #login .login_img{width: 100%; max-width: 300px; margin: 58px auto 25px;}
 #loginForm{padding: 35px 24px; border-radius: 20px 20px 0 0; background-color: #fff;}
 #loginForm .btn_basic{margin-top: 59px;}
